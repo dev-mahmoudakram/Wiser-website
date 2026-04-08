@@ -1,0 +1,35 @@
+@mixin padding-start($value) {
+  padding-inline-start: $value;
+}
+@mixin padding-end($value) {
+  padding-inline-end: $value;
+}
+@mixin margin-start($value) {
+  margin-inline-start: $value;
+}
+@mixin margin-end($value) {
+  margin-inline-end: $value;
+}
+
+@mixin float-start {
+  float: inline-start;
+}
+@mixin float-end {
+  float: inline-end;
+}
+
+@mixin border-radius-start($radius) {
+  border-start-start-radius: $radius;
+  border-end-start-radius: $radius;
+}
+
+@mixin rtl {
+  [dir='rtl'] & {
+    @content;
+  }
+}
+@mixin ltr {
+  [dir='ltr'] & {
+    @content;
+  }
+}

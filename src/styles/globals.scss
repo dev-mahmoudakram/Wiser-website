@@ -1,0 +1,44 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #58585a; // wiser-gray
+  }
+
+  /* Support for dark mode, if user wants it */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #1a1a1a;
+      --foreground: #f8f7f4; // wiser-off-white
+    }
+  }
+}
+
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.arched-image {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+}
+
+.house-cutout {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0 25%);
+}
+
+.border-wiser-sand {
+  border-color: #f0eae1;
+}
