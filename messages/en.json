@@ -1,0 +1,74 @@
+{
+  "HomePage": {
+    "heroTitle1": "Building the ",
+    "heroTitleHighlight": "Future",
+    "heroTitle2": " together.",
+    "heroSubtitle": "Wiser Contracting Company - Leaders in construction, real estate development, and interior design.",
+    "ctaProject": "Explore Our Projects",
+    "ctaContact": "Contact Us",
+    "featuredLabel": "Our Works",
+    "featuredTitle": "Featured Projects",
+    "viewAllProjects": "View All Projects",
+    "ctaTitle1": "Ready to Build ",
+    "ctaTitle2": "Your Vision?",
+    "ctaDesc": "Partner with Wiser Contracting for your next project. We deliver extraordinary results through meticulous planning and exceptional execution.",
+    "About": {
+      "label": "Who We Are",
+      "title": "Our vision begins with details",
+      "description": "At Wiser Contracting Company, we believe that every building tells a story. We combine high craftsmanship with innovative design to turn ideas into tangible realities. Our team of engineers and architects work hand in hand to ensure the delivery of projects that exceed expectations."
+    },
+    "Stats": {
+      "projects": "Completed Project",
+      "years": "Years of Experience",
+      "engineers": "Professional Engineer",
+      "clients": "Happy Client"
+    },
+    "Projects": {
+      "completed": "Completed",
+      "inProgress": "In Progress"
+    },
+    "Services": {
+      "label": "What We Offer",
+      "title": "Our Services",
+      "items": {
+        "construction": {
+          "title": "Construction and Building",
+          "description": "Executing residential and commercial projects from foundations to delivery with the highest standards of quality and safety."
+        },
+        "design": {
+          "title": "Architectural Design",
+          "description": "Innovative architectural designs that combine beauty and functionality, taking into account the latest global trends."
+        },
+        "management": {
+          "title": "Project Management",
+          "description": "Integrated engineering supervision and professional management to ensure delivery on time and within budget."
+        },
+        "decoration": {
+          "title": "Finishes and Decoration",
+          "description": "Internal and external finishes with luxurious materials and artistic touches that reflect your refined taste."
+        },
+        "maintenance": {
+          "title": "Maintenance and Restoration",
+          "description": "Periodic maintenance and comprehensive restoration services for existing buildings to preserve their value and quality."
+        },
+        "consulting": {
+          "title": "Engineering Consultations",
+          "description": "Specialized technical consultations from a team of experienced engineers to help you make the right decisions."
+        }
+      }
+    }
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact Us"
+  },
+  "Footer": {
+    "description": "Pioneering excellence in construction, real estate development, and high-end interior and exterior design across Saudi Arabia.",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "copyright": " Wiser Construction Company. All rights reserved."
+  }
+}
