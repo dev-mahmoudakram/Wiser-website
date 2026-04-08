@@ -4,6 +4,7 @@ import ContactForm from '@/components/contact/ContactForm';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
+import PageHero from '@/components/layout/PageHero';
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -40,33 +41,13 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
   return (
     <main className="min-h-screen bg-wiser-off-white">
-      {/* Hero Section - Atmospheric Dark Redesign */}
-      <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=2000"
-            alt={t('title')}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-wiser-dark-teal/80 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-wiser-dark-teal/40" />
-        </div>
-        
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight drop-shadow-md">
-            {t('title')}
-          </h1>
-          <div className="flex items-center justify-center gap-2 text-white/90 font-medium text-lg md:text-xl drop-shadow-md">
-             <Link href="/" className="hover:text-wiser-gold transition-colors">
-               {nt('home')}
-             </Link>
-             <span>/</span>
-             <span className="text-white">{t('title')}</span>
-          </div>
-        </div>
-      </section>
+      <PageHero 
+        title={t('title')}
+        breadcrumbLabel={t('title')}
+        backgroundImage="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=2000"
+        locale={locale}
+        isAr={isAr}
+      />
 
       {/* Content Section */}
       <section className="relative z-20 -mt-20 pb-24">

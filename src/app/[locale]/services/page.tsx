@@ -13,6 +13,7 @@ import {
   ClipboardCheck,
   CheckCircle2
 } from 'lucide-react';
+import PageHero from '@/components/layout/PageHero';
 
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -103,29 +104,13 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
   return (
     <div className="relative">
-      {/* 1. Hero Section */}
-      <div className="relative h-[50vh] flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&q=80&w=2000"
-            alt={isAr ? 'خدماتنا' : 'Our Services'}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-wiser-dark-teal/85 mix-blend-multiply" />
-        </div>
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight drop-shadow-sm">
-            {isAr ? 'خدماتنا' : 'Our Services'}
-          </h1>
-          <div className="flex items-center justify-center gap-2 text-white/90 font-medium text-lg md:text-xl">
-             <Link href="/" className="hover:text-wiser-gold transition-colors">{isAr ? 'الرئيسية' : 'Home'}</Link>
-             <span>/</span>
-             <span className="text-white">{isAr ? 'خدماتنا' : 'Our Services'}</span>
-          </div>
-        </div>
-      </div>
+      <PageHero 
+        title={isAr ? 'خدماتنا' : 'Our Services'}
+        breadcrumbLabel={isAr ? 'خدماتنا' : 'Services'}
+        backgroundImage="https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&q=80&w=2000"
+        locale={locale}
+        isAr={isAr}
+      />
 
       {/* Intro Text */}
       <section className="py-20 bg-white">

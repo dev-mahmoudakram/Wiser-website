@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { Target, Eye, Lightbulb, ShieldCheck, Gem, Quote } from 'lucide-react';
 import Counter from '@/components/ui/Counter';
+import PageHero from '@/components/layout/PageHero';
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -34,30 +35,13 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
   return (
     <div className="relative">
-      {/* 1. Hero Section */}
-      <div className="relative h-[60vh] md:h-[70vh] flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=2000"
-            alt={isAr ? 'موقع بناء' : 'Construction Site'}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-wiser-dark-teal/80 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-wiser-dark-teal/40" />
-        </div>
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight drop-shadow-md">
-            {isAr ? 'من نحن' : 'About Us'}
-          </h1>
-          <div className="flex items-center justify-center gap-2 text-white/90 font-medium text-lg md:text-xl drop-shadow-md">
-             <Link href="/" className="hover:text-wiser-gold transition-colors">{isAr ? 'الرئيسية' : 'Home'}</Link>
-             <span>/</span>
-             <span className="text-white">{isAr ? 'من نحن' : 'About Us'}</span>
-          </div>
-        </div>
-      </div>
+      <PageHero 
+        title={isAr ? 'من نحن' : 'About Us'}
+        breadcrumbLabel={isAr ? 'من نحن' : 'About Us'}
+        backgroundImage="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=2000"
+        locale={locale}
+        isAr={isAr}
+      />
 
       {/* 2. Story Section & Stats */}
       <section className="pt-24 bg-white relative">
