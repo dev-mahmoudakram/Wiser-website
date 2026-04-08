@@ -2,13 +2,15 @@
 
 import { useTranslations } from 'next-intl';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import Image from 'next/image';
 import { useRef } from 'react';
 
 export default function PreFooterCTA() {
   const t = useTranslations('HomePage');
   const sectionRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
+  const isContactPage = pathname === '/contact';
   
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -51,12 +53,14 @@ export default function PreFooterCTA() {
             {t('ctaDesc')}
           </p>
 
-          <Link 
-            href="/contact"
-            className="inline-block px-10 py-4 border-2 border-white/30 text-white font-bold tracking-[0.2em] uppercase text-xs hover:border-wiser-gold hover:text-wiser-gold hover:bg-white/5 transition-all duration-500 backdrop-blur-sm"
-          >
-            {t('ctaContact')}
-          </Link>
+          {!isContactPage && (
+            <Link 
+              href="/contact"
+              className="inline-block px-10 py-4 border-2 border-white/30 text-white font-bold tracking-[0.2em] uppercase text-xs hover:border-wiser-gold hover:text-wiser-gold hover:bg-white/5 transition-all duration-500 backdrop-blur-sm"
+            >
+              {t('ctaContact')}
+            </Link>
+          )}
         </motion.div>
       </div>
     </section>
