@@ -1,0 +1,99 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  role      Role     @default(ADMIN)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Role {
+  ADMIN
+  SUPER_ADMIN
+}
+
+model Project {
+  id             String        @id @default(cuid())
+  slug           String        @unique
+  title_ar       String
+  title_en       String
+  description_ar String        @db.Text
+  description_en String        @db.Text
+  location_ar    String?
+  location_en    String?
+  category       ProjectCategory
+  status         ProjectStatus @default(IN_PROGRESS)
+  featured       Boolean       @default(false)
+  images         String[]      // Array of image URLs
+  thumbnail      String?
+  year           Int?
+  area           String?       // e.g., "2500 sqm"
+  client_ar      String?
+  client_en      String?
+  order          Int           @default(0)
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  @@index([featured])
+  @@index([category])
+  @@index([status])
+}
+
+enum ProjectCategory {
+  CONSTRUCTION
+  INTERIOR_DESIGN
+  DEVELOPMENT
+  RENOVATION
+}
+
+enum ProjectStatus {
+  IN_PROGRESS
+  COMPLETED
+  UPCOMING
+}
+
+model ContactMessage {
+  id        String        @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String?
+  message   String        @db.Text
+  status    MessageStatus @default(NEW)
+  notes     String?       @db.Text
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@index([status])
+}
+
+enum MessageStatus {
+  NEW
+  READ
+  RESOLVED
+  ARCHIVED
+}
+
+model SiteSettings {
+  id             String @id @default("main")
+  companyName_ar String @default("شركة وايزر للمقاولات")
+  companyName_en String @default("Wiser Contracting Company")
+  phone          String @default("")
+  email          String @default("")
+  address_ar     String @default("")
+  address_en     String @default("")
+  mapEmbedUrl    String @default("")
+  socialLinks    Json?  // { twitter, instagram, linkedin, ... }
+  updatedAt      DateTime @updatedAt
+}
