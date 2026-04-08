@@ -10,7 +10,9 @@ export default function Counter({ value, duration = 2 }: { value: number; durati
     damping: 30,
     stiffness: 100,
   });
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  
+  // Reduced margin to ensure it triggers correctly on small mobile screens
+  const isInView = useInView(ref, { once: true, margin: '-20px' });
 
   useEffect(() => {
     if (isInView) {
@@ -19,12 +21,19 @@ export default function Counter({ value, duration = 2 }: { value: number; durati
   }, [motionValue, value, isInView]);
 
   useEffect(() => {
-    springValue.on('change', (latest) => {
+    const unsubscribe = springValue.on('change', (latest) => {
       if (ref.current) {
         ref.current.textContent = Intl.NumberFormat('en-US').format(Math.floor(latest));
       }
     });
-  }, [springValue]);
+    
+    // Set initial value
+    if (ref.current && !isInView) {
+      ref.current.textContent = '0';
+    }
 
-  return <span ref={ref} />;
+    return () => unsubscribe();
+  }, [springValue, isInView]);
+
+  return <span ref={ref}>0</span>;
 }
