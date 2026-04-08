@@ -20,7 +20,7 @@ export default function AboutSection() {
   return (
     <section ref={ref} className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
           
           {/* Text & Stats Column */}
           <div className="w-full lg:w-1/2 flex flex-col space-y-10">

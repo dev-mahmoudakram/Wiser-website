@@ -3,9 +3,11 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
+import { useState } from 'react';
 
 export default function HeroSection() {
   const t = useTranslations('HomePage');
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-wiser-dark-teal">
@@ -75,16 +77,41 @@ export default function HeroSection() {
           transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="hidden lg:flex justify-end"
         >
-          <div className="relative w-80 h-[500px] border border-wiser-sand/20 rounded-t-full p-4">
-            <div className="w-full h-full rounded-t-full overflow-hidden bg-wiser-dark-teal relative">
+          <div 
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className="relative w-80 h-[500px] border border-wiser-sand/20 rounded-t-full p-4 cursor-pointer group"
+          >
+            <div className="w-full h-full rounded-t-full overflow-hidden bg-gray-900 relative">
+              <motion.div 
+                animate={{ 
+                  filter: isHovered ? 'grayscale(0%)' : 'grayscale(100%)',
+                  scale: isHovered ? 1.1 : 1,
+                  opacity: isHovered ? 1 : 0.6
+                }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ 
+                  backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800")',
+                  filter: isHovered ? 'none' : 'grayscale(100%)' // Fallback/Direct apply
+                }}
+              />
+              {/* Overlay that disappears on hover */}
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-1000"
-                style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800")' }}
+                className={`absolute inset-0 bg-wiser-dark-teal mix-blend-multiply transition-opacity duration-700 ${isHovered ? 'opacity-0' : 'opacity-50'}`}
               />
             </div>
             
-            {/* Minimalist accent dot */}
-            <div className="absolute -left-2 top-1/2 w-4 h-4 rounded-full bg-wiser-gold" />
+            {/* Minimalist accent dot with secondary animation on hover */}
+            <motion.div 
+              animate={{ 
+                scale: isHovered ? 1.5 : [1, 1.2, 1],
+                backgroundColor: isHovered ? "#ffffff" : "#c9a25b",
+                boxShadow: isHovered ? "0 0 20px rgba(255,255,255,0.5)" : ["0 0 0 0px rgba(201, 162, 91, 0.4)", "0 0 0 10px rgba(201, 162, 91, 0)", "0 0 0 0px rgba(201, 162, 91, 0)"]
+              }}
+              transition={isHovered ? { duration: 0.3 } : { repeat: Infinity, duration: 2 }}
+              className="absolute -left-2 top-1/2 w-4 h-4 rounded-full z-10 shadow-lg"
+            />
           </div>
         </motion.div>
       </div>
