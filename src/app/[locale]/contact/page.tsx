@@ -40,7 +40,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   ];
 
   return (
-    <main className="min-h-screen bg-wiser-off-white">
+    <div className="min-h-screen bg-wiser-off-white">
       <PageHero 
         title={t('title')}
         breadcrumbLabel={t('title')}
@@ -52,17 +52,16 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       {/* Content Section */}
       <section className="relative z-20 -mt-20 pb-24">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
             {/* Form Column */}
-            <div className="lg:col-span-12 xl:col-span-7">
+            <div className="lg:col-span-12 xl:col-span-7 h-full">
               <ContactForm />
             </div>
 
             {/* Info Column */}
-            <div className="lg:col-span-12 xl:col-span-5 space-y-8">
-              {/* Info Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-6">
+            <div className="lg:col-span-12 xl:col-span-5 h-full">
+              <div className="h-full flex flex-col justify-around">
                 {contactDetails.map((detail, index) => (
                   <div 
                     key={index}
@@ -90,26 +89,25 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                   </div>
                 ))}
               </div>
-
-              {/* Map Container */}
-              <div className="relative h-[350px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115860.29292850787!2d46.738586!3d24.863116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbdef7f20815%3A0x6ce6bba46c592e85!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1711200000000!5m2!1sen!2sus" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0, filter: 'grayscale(0%) contrast(1) brightness(1) invert(0)' }} 
-                  allowFullScreen 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="grayscale hover:grayscale-0 transition-all duration-1000"
-                />
-                <div className="absolute inset-0 pointer-events-none border-[12px] border-white/5" />
-              </div>
             </div>
+          </div>
 
+          {/* Full Width Map Section */}
+          <div className="mt-16 relative h-[450px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white group">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115860.29292850787!2d46.738586!3d24.863116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbdef7f20815%3A0x6ce6bba46c592e85!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1711200000000!5m2!1sen!2sus" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0, filter: 'grayscale(0%) contrast(1) brightness(1) invert(0)' }} 
+              allowFullScreen 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              className="grayscale hover:grayscale-0 transition-all duration-1000"
+            />
+            <div className="absolute inset-0 pointer-events-none border-[12px] border-white/5" />
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

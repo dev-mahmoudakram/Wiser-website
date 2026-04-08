@@ -203,9 +203,9 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
               {processSteps.map((step, i) => (
                  <div key={i} className="relative text-center group">
                     {/* Circle Icon */}
-                    <div className="w-24 h-24 bg-wiser-off-white rounded-full flex items-center justify-center mx-auto mb-8 border-2 border-dashed border-wiser-teal/30 group-hover:border-wiser-teal transition-colors">
+                    <div className="w-24 h-24 bg-wiser-off-white rounded-full flex items-center justify-center mx-auto mb-8 border-2 border-dashed border-wiser-teal/30 group-hover:border-wiser-teal transition-colors relative">
                        <step.Icon className="text-wiser-dark-teal w-10 h-10 group-hover:scale-110 transition-transform" />
-                       <div className="absolute -top-2 -right-2 w-10 h-10 bg-wiser-dark-teal text-white rounded-full flex items-center justify-center font-bold text-sm">
+                       <div className={`absolute -top-2 w-10 h-10 bg-wiser-dark-teal text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg ${isAr ? '-left-2' : '-right-2'}`}>
                           {step.step}
                        </div>
                     </div>
@@ -216,7 +216,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                     
                     {/* Connecting line for desktop */}
                     {i < 3 && (
-                      <div className="hidden lg:block absolute top-12 left-[calc(50%+60px)] w-[calc(100%-120px)] h-0.5 border-t-2 border-dashed border-wiser-teal/20" />
+                      <div className={`hidden lg:block absolute top-12 w-[75%] h-0.5 border-t-2 border-dashed border-wiser-teal/20 ${isAr ? 'right-[calc(50%+60px)]' : 'left-[calc(50%+60px)]'}`} />
                     )}
                  </div>
               ))}

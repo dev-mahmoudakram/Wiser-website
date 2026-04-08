@@ -20,7 +20,11 @@ export default function PreFooterCTA() {
   const y = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-32 bg-wiser-dark-teal text-wiser-sand text-center relative overflow-hidden">
+    <section 
+      ref={sectionRef} 
+      style={{ position: 'relative' }}
+      className="py-24 md:py-32 bg-wiser-dark-teal text-wiser-sand text-center relative overflow-hidden"
+    >
       {/* Parallax Background Image */}
       <motion.div style={{ y }} className="absolute inset-0 z-0 h-[130%] -top-[15%]">
          <Image 
@@ -29,7 +33,6 @@ export default function PreFooterCTA() {
             fill
             className="object-cover opacity-25 mix-blend-luminosity"
             sizes="100vw"
-            priority
          />
          <div className="absolute inset-0 bg-wiser-dark-teal/60" />
       </motion.div>

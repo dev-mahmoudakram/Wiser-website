@@ -14,10 +14,26 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const isAr = locale === 'ar';
 
   const team = [
-    { name: isAr ? 'م. سعود القحطاني' : 'Eng. Saud Al-Qahtani', role: isAr ? 'مدير التصميم' : 'Design Manager', image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=600' },
-    { name: isAr ? 'م. عبدالرحمن الحربي' : 'Eng. Abdulrahman Al-Harbi', role: isAr ? 'مدير العمليات' : 'Operations Manager', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600' },
-    { name: isAr ? 'م. فهد السالم' : 'Eng. Fahad Al-Salem', role: isAr ? 'مدير المشاريع' : 'Projects Manager', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600' },
-    { name: isAr ? 'م. خالد العمري' : 'Eng. Khalid Al-Amri', role: isAr ? 'المدير العام' : 'General Manager', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600' },
+    { 
+      name: isAr ? 'م. سعود القحطاني' : 'Eng. Saud Al-Qahtani', 
+      role: isAr ? 'مدير التصميم' : 'Design Manager', 
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop' 
+    },
+    { 
+      name: isAr ? 'م. عبدالرحمن الحربي' : 'Eng. Abdulrahman Al-Harbi', 
+      role: isAr ? 'مدير العمليات' : 'Operations Manager', 
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop' 
+    },
+    { 
+      name: isAr ? 'م. فهد السالم' : 'Eng. Fahad Al-Salem', 
+      role: isAr ? 'مدير المشاريع' : 'Projects Manager', 
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop' 
+    },
+    { 
+      name: isAr ? 'م. خالد العمري' : 'Eng. Khalid Al-Amri', 
+      role: isAr ? 'المدير العام' : 'General Manager', 
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop' 
+    },
   ];
 
   const testimonials = [
@@ -38,7 +54,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <PageHero 
         title={isAr ? 'من نحن' : 'About Us'}
         breadcrumbLabel={isAr ? 'من نحن' : 'About Us'}
-        backgroundImage="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=2000"
+        backgroundImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop"
         locale={locale}
         isAr={isAr}
       />
@@ -50,7 +66,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             {/* Arched Image Container */}
             <div className="relative w-full aspect-[4/5] max-w-md mx-auto lg:mx-0 overflow-hidden rounded-t-[50%] shadow-2xl">
               <Image 
-                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1000"
+                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000&auto=format&fit=crop"
                 alt={isAr ? 'قصتنا' : 'Our Story'}
                 fill
                 className="object-cover"

@@ -70,15 +70,19 @@ export default async function LocaleLayout({
     : `${gloock.variable} ${montserrat.variable} font-english`;
 
   return (
-    <html lang={locale} dir={direction} className={fontClasses} suppressHydrationWarning>
-      <body>
+    <html lang={locale} dir={direction} className={`${fontClasses} relative`} style={{ position: 'relative' }} suppressHydrationWarning>
+      <body className="relative" style={{ position: 'relative' }}>
         <ViewTransitions>
           <ReactLenis>
             <NextIntlClientProvider messages={messages} locale={locale}>
               <Navbar />
-              <main>{children}</main>
-              <PreFooterCTA />
-              <Footer />
+              <div className="relative flex flex-col min-h-screen overflow-x-hidden">
+                <main className="flex-grow relative">
+                  {children}
+                  <PreFooterCTA />
+                </main>
+                <Footer />
+              </div>
             </NextIntlClientProvider>
           </ReactLenis>
         </ViewTransitions>
