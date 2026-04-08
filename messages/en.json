@@ -70,5 +70,31 @@
     "quickLinks": "Quick Links",
     "contactUs": "Contact Us",
     "copyright": " Wiser Construction Company. All rights reserved."
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch",
+    "description": "Have a project in mind? We'd love to hear from you. Send us a message and our team will get back to you as soon as possible.",
+    "label": "Contact",
+    "form": {
+      "title": "Send us a Message",
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message",
+      "success": "Your message has been sent successfully!"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "addressValue": "Riyadh, Saudi Arabia",
+      "phone": "Phone Number",
+      "phoneValue": "+966 0109 0246 000",
+      "email": "Email Address",
+      "emailValue": "info@wiser-contracting.com",
+      "hours": "Working Hours",
+      "hoursValue": "Sun - Thu: 9:00 AM - 6:00 PM"
+    }
   }
 }

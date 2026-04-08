@@ -1,83 +1,134 @@
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
+import ContactForm from '@/components/contact/ContactForm';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import Image from 'next/image';
+import { Link } from '@/i18n/navigation';
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const t = await getTranslations('Contact');
+  const nt = await getTranslations('Navigation');
   const isAr = locale === 'ar';
 
+  const contactDetails = [
+    {
+      icon: <MapPin className="transition-colors" size={24} />,
+      label: t('info.address'),
+      value: t('info.addressValue'),
+    },
+    {
+      icon: <Phone className="transition-colors" size={24} />,
+      label: t('info.phone'),
+      value: t('info.phoneValue'),
+      href: 'tel:+96601090246000',
+    },
+    {
+      icon: <Mail className="transition-colors" size={24} />,
+      label: t('info.email'),
+      value: t('info.emailValue'),
+      href: 'mailto:info@wiser-contracting.com',
+    },
+    {
+      icon: <Clock className="transition-colors" size={24} />,
+      label: t('info.hours'),
+      value: t('info.hoursValue'),
+    },
+  ];
+
   return (
-    <div className="pt-20">
-      <section className="bg-wiser-dark-teal text-white py-24 text-center">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">{isAr ? 'اتصل بنا' : 'Contact Us'}</h1>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            {isAr 
-              ? 'نحن هنا للإجابة على استفساراتكم وتحويل أفكاركم إلى واقع.'
-              : 'We are here to answer your inquiries and turn your ideas into reality.'}
-          </p>
+    <main className="min-h-screen bg-wiser-off-white">
+      {/* Hero Section - Atmospheric Dark Redesign */}
+      <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=2000"
+            alt={t('title')}
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-wiser-dark-teal/80 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-wiser-dark-teal/40" />
+        </div>
+        
+        <div className="relative z-10 text-center text-white px-4">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight drop-shadow-md">
+            {t('title')}
+          </h1>
+          <div className="flex items-center justify-center gap-2 text-white/90 font-medium text-lg md:text-xl drop-shadow-md">
+             <Link href="/" className="hover:text-wiser-gold transition-colors">
+               {nt('home')}
+             </Link>
+             <span>/</span>
+             <span className="text-white">{t('title')}</span>
+          </div>
         </div>
       </section>
 
-      <section className="py-24 bg-wiser-off-white">
-        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form Placeholder */}
-          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-wiser-gray/10">
-            <h2 className="text-2xl font-bold text-wiser-dark-teal mb-8">
-              {isAr ? 'أرسل لنا رسالة' : 'Send us a message'}
-            </h2>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-bold text-wiser-gray mb-2">{isAr ? 'الاسم' : 'Name'}</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-lg border border-wiser-gray/20 focus:outline-none focus:border-wiser-teal" />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-wiser-gray mb-2">{isAr ? 'البريد الإلكتروني' : 'Email'}</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-lg border border-wiser-gray/20 focus:outline-none focus:border-wiser-teal" />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-wiser-gray mb-2">{isAr ? 'الموضوع' : 'Subject'}</label>
-                <input type="text" className="w-full px-4 py-3 rounded-lg border border-wiser-gray/20 focus:outline-none focus:border-wiser-teal" />
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-wiser-gray mb-2">{isAr ? 'الرسالة' : 'Message'}</label>
-                <textarea rows={5} className="w-full px-4 py-3 rounded-lg border border-wiser-gray/20 focus:outline-none focus:border-wiser-teal" />
-              </div>
-              <button className="w-full bg-wiser-dark-teal text-white font-bold py-4 rounded-lg hover:bg-wiser-teal transition-colors">
-                {isAr ? 'إرسال الرسالة' : 'Send Message'}
-              </button>
-            </form>
-          </div>
-
-          {/* Contact Info Placeholder */}
-          <div className="space-y-8">
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-wiser-gray/10">
-              <h3 className="text-xl font-bold text-wiser-dark-teal mb-4">{isAr ? 'معلومات التواصل' : 'Contact Information'}</h3>
-              <ul className="space-y-4 text-wiser-gray">
-                <li><strong className="block text-wiser-dark-teal">{isAr ? 'العنوان:' : 'Address:'}</strong> Cairo, Egypt</li>
-                <li dir="ltr"><strong className="block text-wiser-dark-teal text-start w-full">{isAr ? 'الهاتف:' : 'Phone:'}</strong> 0109-0246-000</li>
-                <li dir="ltr"><strong className="block text-wiser-dark-teal text-start w-full">{isAr ? 'البريد الإلكتروني:' : 'Email:'}</strong> info@wiser-contracting.com</li>
-              </ul>
-            </div>
+      {/* Content Section */}
+      <section className="relative z-20 -mt-20 pb-24">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
-            <div className="bg-gray-200 h-64 rounded-3xl overflow-hidden arched-image w-full">
-              {/* Maps Placeholder */}
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115860.29292850787!2d46.738586!3d24.863116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbdef7f20815%3A0x6ce6bba46c592e85!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1711200000000!5m2!1sen!2sus" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            {/* Form Column */}
+            <div className="lg:col-span-12 xl:col-span-7">
+              <ContactForm />
             </div>
+
+            {/* Info Column */}
+            <div className="lg:col-span-12 xl:col-span-5 space-y-8">
+              {/* Info Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-6">
+                {contactDetails.map((detail, index) => (
+                  <div 
+                    key={index}
+                    className="group bg-white p-6 rounded-2xl shadow-sm border border-wiser-dark-teal/5 flex items-center gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                  >
+                    <div className="w-14 h-14 rounded-xl bg-wiser-sand flex items-center justify-center flex-shrink-0 group-hover:bg-wiser-gold transition-colors duration-300">
+                      <div className="text-wiser-gold group-hover:text-white transition-colors duration-300">
+                        {detail.icon}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xs font-bold text-wiser-dark-teal/40 uppercase tracking-[0.2em] mb-1">
+                        {detail.label}
+                      </h3>
+                      {detail.href ? (
+                        <a href={detail.href} className="text-lg font-bold text-wiser-dark-teal hover:text-wiser-gold transition-colors">
+                          {detail.value}
+                        </a>
+                      ) : (
+                        <p className="text-lg font-bold text-wiser-dark-teal">
+                          {detail.value}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Map Container */}
+              <div className="relative h-[350px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115860.29292850787!2d46.738586!3d24.863116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbdef7f20815%3A0x6ce6bba46c592e85!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1711200000000!5m2!1sen!2sus" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0, filter: 'grayscale(0%) contrast(1) brightness(1) invert(0)' }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="grayscale hover:grayscale-0 transition-all duration-1000"
+                />
+                <div className="absolute inset-0 pointer-events-none border-[12px] border-white/5" />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
