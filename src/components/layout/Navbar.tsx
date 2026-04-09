@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -10,6 +10,7 @@ export default function Navbar() {
   const t = useTranslations('Navigation');
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,15 +40,27 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 w-[50%] justify-center">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href as any}
-              className="text-white hover:text-wiser-gold font-medium text-base tracking-widest uppercase transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {links.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href as any}
+                className={`relative text-white hover:text-wiser-gold font-medium text-base tracking-widest uppercase transition-colors ${
+                  isActive ? 'text-wiser-gold' : ''
+                }`}
+              >
+                {link.label}
+                {isActive && (
+                  <motion.span
+                    layoutId="activeNav"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-wiser-gold"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Actions & Mobile Toggle */}
@@ -57,7 +70,9 @@ export default function Navbar() {
           </div>
           <Link
             href="/contact"
-            className="hidden sm:inline-flex px-6 py-2 border border-wiser-gold text-wiser-gold rounded-sm font-bold tracking-widest uppercase text-base hover:bg-wiser-gold hover:text-white transition-colors"
+            className={`hidden sm:inline-flex px-6 py-2 border border-wiser-gold rounded-sm font-bold tracking-widest uppercase text-base transition-colors ${
+              pathname === '/contact' ? 'bg-wiser-gold text-white' : 'text-wiser-gold hover:bg-wiser-gold hover:text-white'
+            }`}
           >
             {t('contact')}
           </Link>
@@ -95,22 +110,27 @@ export default function Navbar() {
             className="fixed inset-0 bg-wiser-dark-teal/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center md:hidden"
           >
             <nav className="flex flex-col items-center gap-8 px-4">
-              {links.map((link, i) => (
-                <motion.div
-                  key={link.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  <Link
-                    href={link.href as any}
-                    onClick={() => setIsOpen(false)}
-                    className="text-white text-3xl font-bold tracking-widest uppercase hover:text-wiser-gold transition-colors"
+              {links.map((link, i) => {
+                const isActive = pathname === link.href;
+                return (
+                  <motion.div
+                    key={link.href}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1 }}
                   >
-                    {link.label}
-                  </Link>
-                </motion.div>
-              ))}
+                    <Link
+                      href={link.href as any}
+                      onClick={() => setIsOpen(false)}
+                      className={`text-white text-3xl font-bold tracking-widest uppercase hover:text-wiser-gold transition-colors ${
+                        isActive ? 'text-wiser-gold' : ''
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                );
+              })}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -121,7 +141,9 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="px-10 py-4 border border-wiser-gold text-wiser-gold rounded-sm font-bold tracking-widest uppercase text-xl hover:bg-wiser-gold hover:text-white transition-colors"
+                  className={`px-10 py-4 border border-wiser-gold rounded-sm font-bold tracking-widest uppercase text-xl transition-colors ${
+                    pathname === '/contact' ? 'bg-wiser-gold text-white' : 'text-wiser-gold hover:bg-wiser-gold hover:text-white'
+                  }`}
                 >
                   {t('contact')}
                 </Link>
