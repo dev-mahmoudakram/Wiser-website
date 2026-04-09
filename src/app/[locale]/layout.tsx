@@ -44,6 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 import Navbar from '@/components/layout/Navbar';
 import PreFooterCTA from '@/components/layout/PreFooterCTA';
 import Footer from '@/components/layout/Footer';
+import ScrollToTop from '@/components/layout/ScrollToTop';
 
 export default async function LocaleLayout({
   children,
@@ -74,6 +75,7 @@ export default async function LocaleLayout({
       <body className="relative" style={{ position: 'relative' }}>
         <ViewTransitions>
           <ReactLenis>
+            <ScrollToTop />
             <NextIntlClientProvider messages={messages} locale={locale}>
               <Navbar />
               <div className="relative flex flex-col min-h-screen overflow-x-hidden">
