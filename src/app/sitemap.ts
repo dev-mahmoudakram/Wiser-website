@@ -1,8 +1,6 @@
 import { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
-
-// This would ideally pull from Prisma in production
-const projects = ['riyadh-tower', 'luxury-villa', 'commercial-hub', 'modern-office'];
+import { projectsData } from '@/data/projects';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wiser-contracting.com';
@@ -24,10 +22,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   // Add project pages
-  projects.forEach((slug) => {
+  projectsData.forEach((project) => {
     routing.locales.forEach((locale) => {
       sitemapEntries.push({
-        url: `${baseUrl}/${locale}/projects/${slug}`,
+        url: `${baseUrl}/${locale}/projects/${project.slug}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.6,

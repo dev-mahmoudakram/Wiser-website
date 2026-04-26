@@ -52,9 +52,9 @@ model Project {
 
 enum ProjectCategory {
   CONSTRUCTION
-  INTERIOR_DESIGN
-  DEVELOPMENT
-  RENOVATION
+  FINISHING
+  REAL_ESTATE_DEVELOPMENT
+  BRIDGES
 }
 
 enum ProjectStatus {
