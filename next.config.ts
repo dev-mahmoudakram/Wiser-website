@@ -17,6 +17,17 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
+          { key: 'Link', value: '<https://images.unsplash.com>; rel=preconnect; crossorigin' },
+        ],
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

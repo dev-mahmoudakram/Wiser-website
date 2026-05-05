@@ -83,6 +83,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={direction} className={`${fontClasses} relative`} style={{ position: 'relative' }} suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+      </head>
       <body className="relative" style={{ position: 'relative' }}>
         <ViewTransitions>
           <ReactLenis>

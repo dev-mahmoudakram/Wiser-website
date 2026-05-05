@@ -5,6 +5,7 @@ import { Link, usePathname } from '@/i18n/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Navbar() {
   const t = useTranslations('Navigation');
@@ -34,8 +35,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex items-center justify-between relative z-50">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 w-[40%] md:w-[25%]" onClick={() => setIsOpen(false)}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/wiser-logo.png" alt="Wiser Construction" width="700" height="350" className={`${scrolled || isOpen ? 'h-12 md:h-14' : 'h-14 md:h-16'} w-auto object-contain transition-all duration-500 filter brightness-0 invert`} />
+          <Image src="/assets/wiser-logo.webp" alt="Wiser Construction" width="700" height="350" className={`${scrolled || isOpen ? 'h-12 md:h-14' : 'h-14 md:h-16'} w-auto object-contain transition-all duration-500 filter brightness-0 invert`} priority />
         </Link>
 
         {/* Desktop Nav */}
@@ -78,7 +78,8 @@ export default function Navbar() {
           </Link>
 
           {/* Mobile Toggle Button */}
-          <button 
+          <button
+            type="button"
             onClick={toggleMenu}
             className="flex flex-col gap-1.5 md:hidden p-2 z-50 group relative"
             aria-label="Toggle Menu"

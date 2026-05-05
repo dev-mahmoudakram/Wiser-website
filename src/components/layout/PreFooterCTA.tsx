@@ -27,12 +27,13 @@ export default function PreFooterCTA() {
     >
       {/* Parallax Background Image */}
       <motion.div style={{ y }} className="absolute inset-0 z-0 h-[130%] -top-[15%]">
-         <Image 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
+         <Image
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=60&w=1200"
             alt=""
             fill
             className="object-cover opacity-25 mix-blend-luminosity"
             sizes="100vw"
+            quality={40}
          />
          <div className="absolute inset-0 bg-wiser-dark-teal/60" />
       </motion.div>

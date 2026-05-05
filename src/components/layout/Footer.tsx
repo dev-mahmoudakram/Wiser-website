@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 
 export default function Footer() {
   const tNav = useTranslations('Navigation');
@@ -13,9 +14,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 mb-16">
           <div className="flex flex-col items-center md:items-start max-w-sm text-center md:text-start">
             <Link href="/" className="mb-6 inline-block">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/assets/wiser-logo.png"
+              <Image
+                src="/assets/wiser-logo.webp"
                 alt="Wiser Construction"
                 width="700"
                 height="350"
