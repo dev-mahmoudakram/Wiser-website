@@ -30,15 +30,10 @@ export default function HeroSection() {
         
         {/* Hero Text */}
         <div className="text-center lg:text-start">
-          <motion.h1 
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-5xl md:text-7xl font-bold mb-6 font-english leading-tight tracking-tight drop-shadow-sm"
-          >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-english leading-tight tracking-tight drop-shadow-sm animate-hero-title">
             {t('heroTitle1')}<br />
             <span className="text-wiser-gold italic font-light">{t('heroTitleHighlight')}</span>{t('heroTitle2')}
-          </motion.h1>
+          </h1>
 
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
