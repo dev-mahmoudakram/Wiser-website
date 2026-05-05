@@ -39,12 +39,20 @@ export default function Footer() {
               <h4 className="font-bold text-wiser-gold tracking-widest uppercase text-xs mb-2">
                 {tFoot('contactUs')}
               </h4>
-              <a href="mailto:info@wiser-contracting.com" dir="ltr" className="hover:text-white transition-colors text-sm font-light">
-                info@wiser-contracting.com
-              </a>
-              <a href="tel:01090246000" dir="ltr" className="hover:text-white transition-colors text-sm font-light mt-1">
-                0109-0246-000
-              </a>
+              <div dir="ltr" className="flex flex-col items-center md:items-start gap-1 [unicode-bidi:isolate]">
+                <a
+                  href="mailto:info@wiser-contracting.com"
+                  className="inline-block text-left hover:text-white transition-colors text-sm font-light"
+                >
+                  info@wiser-contracting.com
+                </a>
+                <a
+                  href="tel:+201066772625"
+                  className="inline-block text-left hover:text-white transition-colors text-sm font-light"
+                >
+                  +20 10 66772625
+                </a>
+              </div>
             </div>
           </div>
         </div>

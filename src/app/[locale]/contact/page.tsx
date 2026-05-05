@@ -24,13 +24,15 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       icon: <Phone className="transition-colors" size={24} />,
       label: t('info.phone'),
       value: t('info.phoneValue'),
-      href: 'tel:+96601090246000',
+      href: 'tel:+201066772625',
+      ltr: true,
     },
     {
       icon: <Mail className="transition-colors" size={24} />,
       label: t('info.email'),
       value: t('info.emailValue'),
       href: 'mailto:info@wiser-contracting.com',
+      ltr: true,
     },
     {
       icon: <Clock className="transition-colors" size={24} />,
@@ -77,7 +79,11 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                         {detail.label}
                       </h3>
                       {detail.href ? (
-                        <a href={detail.href} className="text-lg font-bold text-wiser-dark-teal hover:text-wiser-gold transition-colors">
+                        <a
+                          href={detail.href}
+                          dir={detail.ltr ? 'ltr' : undefined}
+                          className={`text-lg font-bold text-wiser-dark-teal hover:text-wiser-gold transition-colors ${detail.ltr ? 'inline-block text-left [unicode-bidi:isolate]' : ''}`}
+                        >
                           {detail.value}
                         </a>
                       ) : (
@@ -95,7 +101,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           {/* Full Width Map Section */}
           <div className="mt-16 relative h-[450px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white group">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115860.29292850787!2d46.738586!3d24.863116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbdef7f20815%3A0x6ce6bba46c592e85!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1711200000000!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.834176749168!2d31.746357099999997!3d30.298782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1457fd65bf255409%3A0x7bcbda5a3fa4f5a9!2z2LTYsdmD2Kkg2YjYp9mK2LLYsSDZhNmE2YXZgtin2YjZhNin2Kog2KfZhNi52KfZhdip!5e0!3m2!1sen!2seg!4v1777980398528!5m2!1sen!2seg" 
               width="100%" 
               height="100%" 
               style={{ border: 0, filter: 'grayscale(0%) contrast(1) brightness(1) invert(0)' }} 
