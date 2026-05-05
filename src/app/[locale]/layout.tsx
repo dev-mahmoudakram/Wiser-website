@@ -37,6 +37,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       canonical: `/${locale}`,
       languages: { ar: '/ar', en: '/en' },
     },
+    manifest: '/manifest.json',
+    icons: {
+      icon: [
+        { url: '/favicon.ico' },
+        { url: '/icon.png', type: 'image/png' },
+        { url: '/icon.svg', type: 'image/svg+xml' },
+      ],
+      apple: [{ url: '/apple-icon.png' }],
+    },
     openGraph: { locale: isAr ? 'ar_SA' : 'en_US', type: 'website' },
   };
 }

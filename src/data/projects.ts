@@ -41,18 +41,30 @@ export type Project = {
   featured?: boolean;
 };
 
-type ProjectImageSize = {
-  width: number;
-  height: number;
-};
-
 const microFactoryImages = [
   '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/1.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/10.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/11.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/12.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/13.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/14.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/15.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/16.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/17.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/18.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/19.jpeg',
   '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/2.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/20.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/21.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/22.jpeg',
   '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/3.jpeg',
   '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/4.jpeg',
   '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/5.jpeg',
   '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/6.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/7.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/8.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/9.jpeg',
+  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/BIG 5.jpeg',
 ];
 
 const woodCommercialZoneImages = [
@@ -67,59 +79,290 @@ const lrtStationImages = [
 ];
 
 const madinatyApartmentImages = [
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.05 PM (1).jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.05 PM (2).jpeg',
   '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.05 PM.jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.06 PM (1).jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.06 PM (2).jpeg',
   '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.06 PM.jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.07 PM (1).jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.07 PM (2).jpeg',
   '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.07 PM.jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.08 PM (1).jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.08 PM (2).jpeg',
   '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.08 PM.jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.09 PM (1).jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.09 PM (2).jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.09 PM (3).jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.09 PM (4).jpeg',
   '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.09 PM.jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.10 PM (1).jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.10 PM (2).jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.10 PM (3).jpeg',
   '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.10 PM.jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.11 PM (1).jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.11 PM.jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.12 PM (1).jpeg',
+  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.12 PM.jpeg',
 ];
 
 const district15HouseImages = [
-  '/assets/التشطيبات/مشروع الحي 15 بيت 276/WhatsApp Image 2026-04-14 at 1.15.47 PM.jpeg',
   '/assets/التشطيبات/مشروع الحي 15 بيت 276/WhatsApp Image 2026-04-14 at 1.15.47 PM (1).jpeg',
   '/assets/التشطيبات/مشروع الحي 15 بيت 276/WhatsApp Image 2026-04-14 at 1.15.47 PM (2).jpeg',
   '/assets/التشطيبات/مشروع الحي 15 بيت 276/WhatsApp Image 2026-04-14 at 1.15.47 PM (3).jpeg',
+  '/assets/التشطيبات/مشروع الحي 15 بيت 276/WhatsApp Image 2026-04-14 at 1.15.47 PM.jpeg',
 ];
 
 const sadatAccountingOfficeImages = [
-  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.08 PM.jpeg',
   '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.08 PM (1).jpeg',
-  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.09 PM.jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.08 PM (2).jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.08 PM (3).jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.08 PM.jpeg',
   '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.09 PM (1).jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.09 PM (2).jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.09 PM (3).jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.09 PM.jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.10 PM (1).jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.10 PM (2).jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.10 PM (3).jpeg',
   '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.10 PM.jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.11 PM (1).jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.11 PM (2).jpeg',
   '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.11 PM.jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.12 PM (1).jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.12 PM (2).jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.12 PM (3).jpeg',
+  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.12 PM.jpeg',
 ];
 
-const projectImageSizes: Record<string, ProjectImageSize> = {
-  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/1.jpeg': { width: 1600, height: 720 },
-  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/2.jpeg': { width: 1600, height: 720 },
-  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/3.jpeg': { width: 1600, height: 720 },
-  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/4.jpeg': { width: 1280, height: 468 },
-  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/5.jpeg': { width: 1280, height: 576 },
-  '/assets/الإنشاءات/Micro factory - جامعة النيل/صور المشروع/6.jpeg': { width: 1599, height: 666 },
-  '/assets/الإنشاءات/المنطقة التجارية للأخشاب - ميناء الإسكندرية/صور المشروع/1.png': { width: 690, height: 501 },
-  '/assets/الإنشاءات/محطة المنطقة الصناعية - القطار الكهربائى LRT/صور المشروع/1.jpeg': { width: 1280, height: 720 },
-  '/assets/الإنشاءات/محطة المنطقة الصناعية - القطار الكهربائى LRT/صور المشروع/2.jpeg': { width: 1280, height: 430 },
-  '/assets/الإنشاءات/محطة المنطقة الصناعية - القطار الكهربائى LRT/صور المشروع/3.jpeg': { width: 720, height: 1280 },
-  '/assets/الإنشاءات/محطة المنطقة الصناعية - القطار الكهربائى LRT/صور المشروع/4.jpeg': { width: 960, height: 540 },
-  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.05 PM.jpeg': { width: 1280, height: 1207 },
-  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.06 PM.jpeg': { width: 1280, height: 1207 },
-  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.07 PM.jpeg': { width: 1280, height: 1207 },
-  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.08 PM.jpeg': { width: 1087, height: 1280 },
-  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.09 PM.jpeg': { width: 1280, height: 1207 },
-  '/assets/التشطيبات/شقة مدينتي/WhatsApp Image 2026-04-14 at 1.21.10 PM.jpeg': { width: 1087, height: 1280 },
-  '/assets/التشطيبات/مشروع الحي 15 بيت 276/WhatsApp Image 2026-04-14 at 1.15.47 PM.jpeg': { width: 1179, height: 1280 },
-  '/assets/التشطيبات/مشروع الحي 15 بيت 276/WhatsApp Image 2026-04-14 at 1.15.47 PM (1).jpeg': { width: 966, height: 1280 },
-  '/assets/التشطيبات/مشروع الحي 15 بيت 276/WhatsApp Image 2026-04-14 at 1.15.47 PM (2).jpeg': { width: 1179, height: 1280 },
-  '/assets/التشطيبات/مشروع الحي 15 بيت 276/WhatsApp Image 2026-04-14 at 1.15.47 PM (3).jpeg': { width: 941, height: 1280 },
-  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.08 PM.jpeg': { width: 1000, height: 750 },
-  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.08 PM (1).jpeg': { width: 1000, height: 750 },
-  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.09 PM.jpeg': { width: 1000, height: 750 },
-  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.09 PM (1).jpeg': { width: 1000, height: 750 },
-  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.10 PM.jpeg': { width: 1000, height: 750 },
-  '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.11 PM.jpeg': { width: 1000, height: 750 },
-};
+const bridgeProjects: Project[] = [
+  {
+    id: 8,
+    slug: 'bridge-project-1',
+    titleAr: 'مشروع تطوير البر الايمن للرياح التوفيقى - كوبرى اسنيت الشرقى - كوبرى المنشاة الكبرى',
+    titleEn: 'Right Bank Development of El-Rayah El-Tawfiky - Esneit East Bridge - El-Mansha El-Kobra Bridge',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع تطوير البر الايمن للرياح التوفيقى - كوبرى اسنيت الشرقى - كوبرى المنشاة الكبرى/صور المشروع/1.jpg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع تطوير البر الايمن للرياح التوفيقى - كوبرى اسنيت الشرقى - كوبرى المنشاة الكبرى/صور المشروع/2.jpeg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع تطوير البر الايمن للرياح التوفيقى - كوبرى اسنيت الشرقى - كوبرى المنشاة الكبرى/صور المشروع/3.jpeg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع تطوير البر الايمن للرياح التوفيقى - كوبرى اسنيت الشرقى - كوبرى المنشاة الكبرى/صور المشروع/4.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع تطوير البر الايمن للرياح التوفيقى - كوبرى اسنيت الشرقى - كوبرى المنشاة الكبرى/صور المشروع/5.png',
+    ],
+  },
+  {
+    id: 9,
+    slug: 'bridge-project-2',
+    titleAr: 'مشروع كوبرى المستقبل',
+    titleEn: 'El Mostakbal Bridge Project',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى المستقبل/صور المشروع/1.jpg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى المستقبل/صور المشروع/2.jpg',
+    ],
+  },
+  {
+    id: 10,
+    slug: 'bridge-project-3',
+    titleAr: 'مشروع كوبرى برج العرب',
+    titleEn: 'Borg El Arab Bridge Project',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى برج العرب/صور المشروع/1.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى برج العرب/صور المشروع/2.png',
+    ],
+  },
+  {
+    id: 11,
+    slug: 'bridge-project-4',
+    titleAr: 'مشروع كوبرى جنيفة',
+    titleEn: 'Geneifa Bridge Project',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى جنيفة/صور المشروع/1.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى جنيفة/صور المشروع/2.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى جنيفة/صور المشروع/3.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى جنيفة/صور المشروع/4.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى جنيفة/صور المشروع/5.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى جنيفة/صور المشروع/6.png',
+    ],
+  },
+  {
+    id: 12,
+    slug: 'bridge-project-5',
+    titleAr: 'مشروع كوبرى ريجوا - كبارى القطار السريع',
+    titleEn: 'Regwa Bridge Project - High-Speed Rail Bridges',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى ريجوا - كبارى القطار السريع/صور المشروع/1.jpg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى ريجوا - كبارى القطار السريع/صور المشروع/2.jpg',
+    ],
+  },
+  {
+    id: 13,
+    slug: 'bridge-project-6',
+    titleAr: 'مشروع كوبرى سيدى كرير',
+    titleEn: 'Sidi Kerir Bridge Project',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى سيدى كرير/صور المشروع/1.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى سيدى كرير/صور المشروع/2.png',
+    ],
+  },
+  {
+    id: 14,
+    slug: 'bridge-project-7',
+    titleAr: 'مشروع كوبرى عرب الرمل - اجهور الرمل',
+    titleEn: 'Arab El-Raml - Aghour El-Raml Bridge Project',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى عرب الرمل - اجهور الرمل/صور المشروع/1.jpeg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى عرب الرمل - اجهور الرمل/صور المشروع/2.jpeg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى عرب الرمل - اجهور الرمل/صور المشروع/3.jpeg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى عرب الرمل - اجهور الرمل/صور المشروع/4.jpeg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى عرب الرمل - اجهور الرمل/صور المشروع/5.jpeg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى عرب الرمل - اجهور الرمل/صور المشروع/6.jpeg',
+    ],
+  },
+  {
+    id: 15,
+    slug: 'bridge-project-8',
+    titleAr: 'مشروع كوبرى علوى أسنيت على طريق بنها المنصورة',
+    titleEn: 'Esneit Overpass on Benha-Mansoura Road Project',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى علوى أسنيت على طريق بنها المنصورة/صور المشروع/1.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى علوى أسنيت على طريق بنها المنصورة/صور المشروع/2.png',
+    ],
+  },
+  {
+    id: 16,
+    slug: 'bridge-project-9',
+    titleAr: 'مشروع كوبرى علوى كفر شكر على طريق بنها المنصورة',
+    titleEn: 'Kafr Shokr Overpass on Benha-Mansoura Road Project',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى علوى كفر شكر على طريق بنها المنصورة/صور المشروع/1.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى علوى كفر شكر على طريق بنها المنصورة/صور المشروع/2.png',
+    ],
+  },
+  {
+    id: 17,
+    slug: 'bridge-project-10',
+    titleAr: 'مشروع كوبرى ميناء الادبية بالسويس',
+    titleEn: 'Adabiya Port Bridge in Suez Project',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى ميناء الادبية بالسويس/صور المشروع/1.png',
+    ],
+  },
+  {
+    id: 18,
+    slug: 'bridge-project-11',
+    titleAr: 'مشروع محور ابو تيج العلوى على النيل',
+    titleEn: 'Abu Tig Elevated Axis over the Nile Project',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ابو تيج العلوى على النيل/صور المشروع/1.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ابو تيج العلوى على النيل/صور المشروع/2.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ابو تيج العلوى على النيل/صور المشروع/3.png',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ابو تيج العلوى على النيل/صور المشروع/4.jpg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ابو تيج العلوى على النيل/صور المشروع/5.jpg',
+    ],
+  },
+  {
+    id: 19,
+    slug: 'bridge-project-12',
+    titleAr: 'مشروع محور الفردوس',
+    titleEn: 'Al Ferdous Axis Project',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور الفردوس/صور المشروع/1.jpg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور الفردوس/صور المشروع/2.png',
+    ],
+  },
+  {
+    id: 20,
+    slug: 'bridge-project-13',
+    titleAr: 'مشروع محور ديروط العلوى على النيل',
+    titleEn: 'Dayrout Elevated Axis over the Nile Project',
+    typeKey: 'bridges',
+    status: 'completed',
+    images: [
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ديروط العلوى على النيل/صور المشروع/1.jpg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ديروط العلوى على النيل/صور المشروع/2.jpeg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ديروط العلوى على النيل/صور المشروع/3.jpeg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ديروط العلوى على النيل/صور المشروع/4.jpeg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ديروط العلوى على النيل/صور المشروع/5.jpeg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ديروط العلوى على النيل/صور المشروع/6.jpeg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ديروط العلوى على النيل/صور المشروع/7.jpg',
+      '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ديروط العلوى على النيل/صور المشروع/8.jpeg',
+    ],
+  },
+  {
+    id: 21,
+    slug: 'bridge-project-14',
+    titleAr: 'مشروع كوبرى 6 العاصمة الادارية',
+    titleEn: 'Administrative Capital Bridge 6 Project',
+    typeKey: 'bridges',
+    status: 'inProgress',
+    images: [
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى 6 العاصمة الادارية/صور المشروع/1.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى 6 العاصمة الادارية/صور المشروع/2.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى 6 العاصمة الادارية/صور المشروع/3.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى 6 العاصمة الادارية/صور المشروع/4.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى 6 العاصمة الادارية/صور المشروع/5.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى 6 العاصمة الادارية/صور المشروع/6.jpg',
+    ],
+  },
+  {
+    id: 22,
+    slug: 'bridge-project-15',
+    titleAr: 'مشروع كوبرى تقاطع الدائرى الاقليمى - كبارى القطار السريع',
+    titleEn: 'Regional Ring Road Interchange Bridge Project - High-Speed Rail Bridges',
+    typeKey: 'bridges',
+    status: 'inProgress',
+    images: [
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى تقاطع الدائرى الاقليمى - كبارى القطار السريع/صور المشروع/IMG-20260414-WA0000.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى تقاطع الدائرى الاقليمى - كبارى القطار السريع/صور المشروع/IMG-20260414-WA0001.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى تقاطع الدائرى الاقليمى - كبارى القطار السريع/صور المشروع/IMG-20260414-WA0002.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى تقاطع الدائرى الاقليمى - كبارى القطار السريع/صور المشروع/IMG-20260414-WA0003.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى تقاطع الدائرى الاقليمى - كبارى القطار السريع/صور المشروع/IMG-20260414-WA0004.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى تقاطع الدائرى الاقليمى - كبارى القطار السريع/صور المشروع/IMG-20260414-WA0005.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى تقاطع الدائرى الاقليمى - كبارى القطار السريع/صور المشروع/IMG-20260414-WA0006.jpg',
+    ],
+  },
+  {
+    id: 23,
+    slug: 'bridge-project-16',
+    titleAr: 'مشروع كوبرى7 العاصمة الادارية',
+    titleEn: 'Administrative Capital Bridge 7 Project',
+    typeKey: 'bridges',
+    status: 'inProgress',
+    images: [
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى7 العاصمة الادارية/صور المشروع/1.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى7 العاصمة الادارية/صور المشروع/2.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى7 العاصمة الادارية/صور المشروع/3.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى7 العاصمة الادارية/صور المشروع/4.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى7 العاصمة الادارية/صور المشروع/5.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى7 العاصمة الادارية/صور المشروع/6.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى7 العاصمة الادارية/صور المشروع/7.jpg',
+      '/assets/bridges/مشروعات جارية/مشروع كوبرى7 العاصمة الادارية/صور المشروع/8.jpg',
+    ],
+  },
+];
 
 export const projectsData: Project[] = [
   {
@@ -129,7 +372,7 @@ export const projectsData: Project[] = [
     titleEn: 'Micro Factory - Nile University',
     typeKey: 'construction',
     status: 'completed',
-    locationAr: 'جامعة النيل - المحور المركزى - السادس من اكتوبر',
+    locationAr: 'جامعة النيل - المحور المركزي - السادس من أكتوبر',
     locationEn: 'Nile University - Central Axis - 6th of October',
     ownerAr: 'جامعة النيل الأهلية',
     ownerEn: 'Nile University',
@@ -137,13 +380,21 @@ export const projectsData: Project[] = [
     contractorEn: 'Wiser General Contracting Company',
     year: '2024',
     descriptionAr:
-      'مشروع المصنع المصغر أو الـ Micro Factory في جامعة النيل الأهلية بمصر هو أحد المشاريع الرائدة والفريدة من نوعها في المنطقة، وقد أُسس كجزء من المبادرة القومية "رواد النيل" (NilePreneurs) التي يرعاها البنك المركزي المصري، وبالتعاون مع وزارة التخطيط والتنمية الاقتصادية من خلال مشروع رواد 2030.\n\nفي عام 2024 تم ترشيح المشروع كأفضل مشروع تجاري في السنة ضمن جوائز BIG 5 Egypt Impact Awards، ووصل للمرحلة النهائية وكان من أفضل 3 مشاريع تجارية في مصر لعام 2024.\n\nقامت شركة وايزر للمقاولات العامة بتنفيذ أعمال الورش والمبنى الإداري، حيث تم تجهيز وتشطيب عدد 5 ورش، كما تم إنشاء المبنى الإداري باستخدام عدد 9 حاويات مكونة من دورين.',
+      `مشروع المصنع المصغر أو الـ Micro Factory في جامعة النيل الأهلية بمصر هو أحد المشاريع الرائدة والفريدة من نوعها في المنطقة، وقد أُسس كجزء من المبادرة القومية "رواد النيل" (NilePreneurs) التي يرعاها البنك المركزي المصري، وبالتعاون مع وزارة التخطيط والتنمية الاقتصادية من خلال مشروع رواد 2030.
+
+في عام 2024 تم ترشيح المشروع كأفضل مشروع تجاري في السنة ضمن جوائز BIG 5 Egypt Impact Awards، ووصل للمرحلة النهائية وكان من أفضل 3 مشاريع تجارية في مصر لعام 2024.
+
+قامت شركة وايزر للمقاولات العامة بتنفيذ أعمال الورش والمبنى الإداري، حيث تم تجهيز وتشطيب عدد 5 ورش، كما تم إنشاء المبنى الإداري باستخدام عدد 9 حاويات مكونة من دورين.`,
     descriptionEn:
-      'The Micro Factory project at Nile University in Egypt is one of the leading and most distinctive projects of its kind in the region. It was established as part of the national NilePreneurs initiative, sponsored by the Central Bank of Egypt, in cooperation with the Ministry of Planning and Economic Development through the Rowad 2030 project.\n\nIn 2024, the project was nominated for Commercial Project of the Year at the BIG 5 Egypt Impact Awards. It reached the final stage and was ranked among the top three commercial projects in Egypt for 2024.\n\nWiser General Contracting Company executed the workshop and administrative building works. The scope included fitting out and finishing five workshops, as well as constructing a two-story administrative building using nine containers.',
+      `The Micro Factory project at Nile University in Egypt is one of the leading and most distinctive projects of its kind in the region. It was established as part of the national NilePreneurs initiative, sponsored by the Central Bank of Egypt, in cooperation with the Ministry of Planning and Economic Development through the Rowad 2030 project.
+
+In 2024, the project was nominated for Commercial Project of the Year at the BIG 5 Egypt Impact Awards. It reached the final stage and was ranked among the top three commercial projects in Egypt for 2024.
+
+Wiser General Contracting Company executed the workshop and administrative building works. The scope included fitting out and finishing five workshops, as well as constructing a two-story administrative building using nine containers.`,
     scopeAr: [
       'تجهيز وتشطيب عدد 5 ورش',
       'إنشاء المبنى الإداري باستخدام عدد 9 حاويات مكونة من دورين',
-      'أعمال الأرضيات الإيبوكسية',
+      'أعمال الأرضيات الإيبوكسي',
       'أعمال أرضيات الفينيل',
       'أعمال حوائط وأسقف الساندوتش بانل',
       'أعمال حوائط المارموكس',
@@ -192,9 +443,13 @@ export const projectsData: Project[] = [
     subcontractorAr: 'شركة وايزر للمقاولات العامة',
     subcontractorEn: 'Wiser General Contracting Company',
     descriptionAr:
-      'مشروع المنطقة التجارية واللوجستية للأخشاب بميناء الإسكندرية يمثل جزءاً محورياً من المخطط الشامل للدولة لتحويل ميناء الإسكندرية الكبير إلى مركز عالمي للتجارة واللوجستيات، ولحل مشكلة التكدس المروري وزيادة الطاقة الاستيعابية للميناء.\n\nقامت شركة وايزر للمقاولات العامة بتنفيذ مجموعة متكاملة من الأعمال المدنية والمعمارية والكهروميكانيكية وأعمال الموقع العام.',
+      `مشروع المنطقة التجارية واللوجستية للأخشاب بميناء الإسكندرية يمثل جزءاً محورياً من المخطط الشامل للدولة لتحويل ميناء الإسكندرية الكبير إلى مركز عالمي للتجارة واللوجستيات، ولحل مشكلة التكدس المروري وزيادة الطاقة الاستيعابية للميناء.
+
+قامت شركة وايزر للمقاولات العامة بتنفيذ مجموعة متكاملة من الأعمال المدنية والمعمارية والكهروميكانيكية وأعمال الموقع العام.`,
     descriptionEn:
-      'The Wood Commercial and Logistics Zone project at Alexandria Port is a key part of the state’s comprehensive plan to transform Greater Alexandria Port into a global trade and logistics hub. The project also supports efforts to reduce traffic congestion and increase the port’s handling capacity.\n\nWiser General Contracting Company executed an integrated scope of civil, architectural, electromechanical, and general site works.',
+      `The Wood Commercial and Logistics Zone project at Alexandria Port is a key part of the state?s comprehensive plan to transform Greater Alexandria Port into a global trade and logistics hub. The project also supports efforts to reduce traffic congestion and increase the port?s handling capacity.
+
+Wiser General Contracting Company executed an integrated scope of civil, architectural, electromechanical, and general site works.`,
     scopeAr: [
       'أعمال الحفر والردم',
       'أعمال القواعد العادية والمسلحة',
@@ -234,11 +489,11 @@ export const projectsData: Project[] = [
   {
     id: 3,
     slug: 'lrt-industrial-zone-station',
-    titleAr: 'محطة المنطقة الصناعية - القطار الكهربائى LRT',
+    titleAr: 'محطة المنطقة الصناعية - القطار الكهربائي LRT',
     titleEn: 'Industrial Zone Station - LRT Electric Train',
     typeKey: 'construction',
     status: 'completed',
-    locationAr: 'القطار الكهربائى LRT',
+    locationAr: 'القطار الكهربائي LRT',
     locationEn: 'LRT Electric Train',
     images: lrtStationImages,
   },
@@ -257,7 +512,7 @@ export const projectsData: Project[] = [
   {
     id: 5,
     slug: 'hamdy-villa-neighborhood-88',
-    titleAr: 'م حمدي فيلا مجاورة 88',
+    titleAr: 'م. حمدي فيلا مجاورة 88',
     titleEn: 'Engineer Hamdy Villa - Neighborhood 88',
     typeKey: 'finishing',
     status: 'completed',
@@ -289,6 +544,7 @@ export const projectsData: Project[] = [
     images: sadatAccountingOfficeImages,
     featured: true,
   },
+  ...bridgeProjects,
 ];
 
 export const featuredProjectsData = projectsData.filter((project) => project.featured);
@@ -307,6 +563,6 @@ export function getProjectStatusLabel(statusKey: ProjectStatusKey, locale: strin
   return (locale === 'ar' ? status?.labelAr : status?.labelEn) ?? statusKey;
 }
 
-export function getProjectImageSize(src: string): ProjectImageSize {
-  return projectImageSizes[src] ?? { width: 1600, height: 900 };
+export function getProjectImageSize(_src: string) {
+  return { width: 1600, height: 900 };
 }

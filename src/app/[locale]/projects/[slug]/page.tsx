@@ -2,7 +2,14 @@ import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
-import { getProjectBySlug, getProjectImageSize, getProjectStatusLabel, getProjectTypeLabel } from '@/data/projects';
+import { getProjectBySlug, getProjectStatusLabel, getProjectTypeLabel, projectsData } from '@/data/projects';
+import { routing } from '@/i18n/routing';
+
+export function generateStaticParams() {
+  return routing.locales.flatMap((locale) =>
+    projectsData.map((project) => ({ locale, slug: project.slug }))
+  );
+}
 
 function getGalleryGridClass(total: number) {
   if (total <= 1) {
@@ -29,7 +36,8 @@ export default async function ProjectDetailPage({
   setRequestLocale(locale);
 
   const isAr = locale === 'ar';
-  const project = getProjectBySlug(slug);
+  const normalizedSlug = decodeURIComponent(slug);
+  const project = getProjectBySlug(normalizedSlug);
 
   if (!project) {
     notFound();
@@ -148,19 +156,16 @@ export default async function ProjectDetailPage({
 
           <div className={`${getGalleryGridClass(project.images.length)} mx-auto items-start gap-4 md:gap-6`}>
              {project.images.length > 0 ? project.images.map((img: string, index: number) => {
-                const imageSize = getProjectImageSize(img);
-
                 return (
                   <div 
                     key={index} 
-                    className="self-start overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5 hover:shadow-xl transition-shadow duration-300 group"
+                    className="relative self-start aspect-video overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5 hover:shadow-xl transition-shadow duration-300 group"
                   >
                     <Image 
                       src={img}
                       alt={`${title} ${index + 1}`}
-                      width={imageSize.width}
-                      height={imageSize.height}
-                      className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.02]"
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
