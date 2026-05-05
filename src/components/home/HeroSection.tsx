@@ -57,7 +57,7 @@ export default function HeroSection() {
           >
             <Link 
               href="/projects"
-              className="px-10 py-4 bg-wiser-gold text-white rounded-sm font-bold tracking-widest uppercase text-sm hover:bg-white hover:text-wiser-dark-teal transition-all duration-500"
+              className="px-10 py-4 bg-wiser-gold text-wiser-dark-teal rounded-sm font-bold tracking-widest uppercase text-sm hover:bg-white hover:text-wiser-dark-teal transition-all duration-500"
             >
               {t('ctaProject')}
             </Link>

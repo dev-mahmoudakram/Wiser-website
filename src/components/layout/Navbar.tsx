@@ -35,7 +35,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 w-[40%] md:w-[25%]" onClick={() => setIsOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/wiser-logo.png" alt="Wiser Construction" className={`${scrolled || isOpen ? 'h-12 md:h-14' : 'h-14 md:h-16'} w-auto object-contain transition-all duration-500 filter brightness-0 invert`} />
+          <img src="/assets/wiser-logo.png" alt="Wiser Construction" width="700" height="350" className={`${scrolled || isOpen ? 'h-12 md:h-14' : 'h-14 md:h-16'} w-auto object-contain transition-all duration-500 filter brightness-0 invert`} />
         </Link>
 
         {/* Desktop Nav */}

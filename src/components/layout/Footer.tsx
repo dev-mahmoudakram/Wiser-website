@@ -14,10 +14,12 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start max-w-sm text-center md:text-start">
             <Link href="/" className="mb-6 inline-block">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img 
-                src="/assets/wiser-logo.png" 
-                alt="Wiser Construction" 
-                className="h-16 w-auto object-contain filter brightness-0 invert" 
+              <img
+                src="/assets/wiser-logo.png"
+                alt="Wiser Construction"
+                width="700"
+                height="350"
+                className="h-16 w-auto object-contain filter brightness-0 invert"
               />
             </Link>
             <p className="opacity-80 text-sm font-light leading-relaxed">
@@ -27,18 +29,18 @@ export default function Footer() {
 
           <div className="flex flex-wrap justify-center md:justify-end gap-16 md:gap-24">
             <div className="flex flex-col gap-4 text-center md:text-start">
-              <h4 className="font-bold text-wiser-gold tracking-widest uppercase text-xs mb-2">
+              <p className="font-bold text-wiser-gold tracking-widest uppercase text-xs mb-2">
                 {tFoot('quickLinks')}
-              </h4>
+              </p>
               <Link href="/about" className="hover:text-white transition-colors text-sm font-light">{tNav('about')}</Link>
               <Link href="/projects" className="hover:text-white transition-colors text-sm font-light">{tNav('projects')}</Link>
               <Link href="/services" className="hover:text-white transition-colors text-sm font-light">{tNav('services')}</Link>
             </div>
 
             <div className="flex flex-col gap-4 text-center md:text-start">
-              <h4 className="font-bold text-wiser-gold tracking-widest uppercase text-xs mb-2">
+              <p className="font-bold text-wiser-gold tracking-widest uppercase text-xs mb-2">
                 {tFoot('contactUs')}
-              </h4>
+              </p>
               <div dir="ltr" className="flex flex-col items-center md:items-start gap-1 [unicode-bidi:isolate]">
                 <a
                   href="mailto:info@wiser-contracting.com"

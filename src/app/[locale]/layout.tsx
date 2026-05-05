@@ -22,6 +22,8 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+const SITE_URL = 'https://wiser-eg.com';
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const isAr = locale === 'ar';
@@ -34,8 +36,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ? 'شركة وايزر للمقاولات - رواد في البناء والتصميم الداخلي'
       : 'Wiser Contracting Company - Leaders in construction and interior design',
     alternates: {
-      canonical: `/${locale}`,
-      languages: { ar: '/ar', en: '/en' },
+      canonical: `${SITE_URL}/${locale}`,
+      languages: { ar: `${SITE_URL}/ar`, en: `${SITE_URL}/en` },
     },
     manifest: '/manifest.json',
     icons: {

@@ -26,9 +26,9 @@ export default function AboutSection() {
           <div className="w-full lg:w-1/2 flex flex-col space-y-10">
             {/* Header Text */}
             <div className="space-y-4">
-              <h3 className="text-wiser-light-teal font-medium tracking-wide">
+              <p className="text-wiser-teal font-medium tracking-wide">
                 {t('About.label')}
-              </h3>
+              </p>
               <h2 className="text-4xl md:text-5xl font-bold text-wiser-dark-teal leading-tight">
                 {t('About.title')}
               </h2>

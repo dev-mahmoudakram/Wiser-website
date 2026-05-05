@@ -35,9 +35,9 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
-          <h3 className="text-wiser-light-teal font-medium tracking-wide">
+          <p className="text-wiser-teal font-medium tracking-wide">
             {t('label')}
-          </h3>
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold text-wiser-dark-teal">
             {t('title')}
           </h2>
