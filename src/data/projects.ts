@@ -143,6 +143,56 @@ const bridgeProjects: Project[] = [
     titleEn: 'Right Bank Development of El-Rayah El-Tawfiky - Esneit East Bridge - El-Mansha El-Kobra Bridge',
     typeKey: 'bridges',
     status: 'completed',
+    locationAr: 'بنها – المنصورة',
+    locationEn: 'Benha – Mansoura',
+    ownerAr: 'الهيئة العامة للطرق والكبارى',
+    ownerEn: 'General Authority for Roads and Bridges',
+    clientAr: 'النيل للاستشارات الهندسية',
+    clientEn: 'Nile Engineering Consultants',
+    contractorAr: 'شركة النيل العامة للطرق والكبارى والأعمال البحرية',
+    contractorEn: 'Nile General Company for Roads, Bridges and Marine Works',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `مشروع تطوير البر الأيمن للرياح التوفيقي هو واحد من أضخم المشروعات القومية في قطاع النقل بمصر، ويهدف بشكل أساسي إلى حل الأزمات المرورية الخانقة على طريق بنها - المنصورة.
+
+قامت شركة وايزر للمقاولات العامة بتنفيذ كوبريَّين ضمن هذا المشروع:
+- كوبرى اسنيت الشرقى: بطول 850 م وعرض 13 م
+- كوبرى المنشأة الكبرى: بطول 750 م وعرض 17 م`,
+    descriptionEn:
+      `The Right Bank Development of El-Rayah El-Tawfiky project is one of the largest national infrastructure projects in Egypt's transport sector. Its primary objective is to alleviate severe traffic congestion on the Benha–Mansoura road.
+
+Wiser General Contracting Company executed two bridges within this project:
+- Esneit East Bridge: 850 m long and 13 m wide
+- El-Mansha El-Kobra Bridge: 750 m long and 17 m wide`,
+    scopeAr: [
+      'أعمال الخوازيق للقواعد المسلحة',
+      'أعمال الخوازيق الساندة',
+      'أعمال خوازيق البنتونيت',
+      'أعمال القواعد المسلحة',
+      'أعمال الحوائط المسلحة',
+      'أعمال الأعمدة المونوبايل والأعمدة التيجان',
+      'أعمال الهامات',
+      'أعمال البلاطات على خوازيق',
+      'أعمال الكمرات السابقة الصب',
+      'أعمال البلاطات فوق الكمرات',
+      'أعمال بلاطات القطاع الصندوقى',
+      'أعمال دهانات السافيتو',
+    ],
+    scopeEn: [
+      'Piling works for reinforced foundations',
+      'Retaining pile works',
+      'Bentonite pile works',
+      'Reinforced concrete foundation works',
+      'Reinforced wall works',
+      'Monopile column and crown column works',
+      'Cap beam works',
+      'Pile-supported slab works',
+      'Precast beam works',
+      'Slabs over beams',
+      'Box section slab works',
+      'Saveto coating works',
+    ],
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع تطوير البر الايمن للرياح التوفيقى - كوبرى اسنيت الشرقى - كوبرى المنشاة الكبرى/صور المشروع/1.jpg',
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع تطوير البر الايمن للرياح التوفيقى - كوبرى اسنيت الشرقى - كوبرى المنشاة الكبرى/صور المشروع/2.jpeg',
@@ -158,6 +208,28 @@ const bridgeProjects: Project[] = [
     titleEn: 'El Mostakbal Bridge Project',
     typeKey: 'bridges',
     status: 'completed',
+    locationAr: 'طريق الإسماعيلية الصحراوى',
+    locationEn: 'Ismailia Desert Road',
+    ownerAr: 'الهيئة العامة للطرق والكبارى',
+    ownerEn: 'General Authority for Roads and Bridges',
+    contractorAr: 'الشركة الوطنية للتشييد - سامكو',
+    contractorEn: 'National Construction Company - SAMCO',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `تُعدّ محطة وكوبرى مدينة المستقبل واحدة من أهم نقاط التوقف في المرحلة الأولى لمشروع القطار الكهربائي الخفيف (LRT)، نظرًا لموقعها الاستراتيجي الذي يخدم التوسعات العمرانية شرق القاهرة. يخدم الكوبرى سكان مدينة المستقبل ومدينة العبور الجديدة والتجمعات السكنية المحيطة، مما يقلل الاعتماد على السيارات الخاصة والأتوبيسات التقليدية.`,
+    descriptionEn:
+      `The El Mostakbal City station and bridge is one of the most important stops in Phase 1 of the Light Rail Transit (LRT) project, owing to its strategic location serving the urban expansions east of Cairo. The bridge serves residents of El Mostakbal City, New El Obour City, and the surrounding residential communities, reducing dependence on private cars and traditional buses.`,
+    scopeAr: [
+      'أعمال القواعد المسلحة',
+      'أعمال الأعمدة والهامات',
+      'أعمال بلاطات القطاع الصندوقى',
+    ],
+    scopeEn: [
+      'Reinforced concrete foundation works',
+      'Column and cap beam works',
+      'Box section slab works',
+    ],
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى المستقبل/صور المشروع/1.jpg',
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى المستقبل/صور المشروع/2.jpg',
@@ -182,6 +254,32 @@ const bridgeProjects: Project[] = [
     titleEn: 'Geneifa Bridge Project',
     typeKey: 'bridges',
     status: 'completed',
+    locationAr: 'جنيفة – طريق السويس',
+    locationEn: 'Geneifa – Suez Road',
+    ownerAr: 'الهيئة القومية للأنفاق',
+    ownerEn: 'National Authority for Tunnels',
+    clientAr: 'مكتب خطيب وعلمى',
+    clientEn: 'Khateeb & Alami',
+    contractorAr: 'شركة النيل العامة للطرق والكبارى والأعمال البحرية',
+    contractorEn: 'Nile General Company for Roads, Bridges and Marine Works',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `كوبرى جنيفة يُعدّ من المعالم الهندسية الهامة في مشروع القطار الكهربائي الخفيف (LRT)، وهو جزء من المسار الذي يربط القاهرة بالمدن الجديدة وصولاً إلى العاصمة الإدارية. تم إنشاء الكوبرى لتسهيل عبور القطار فوق طريق جنيفة، مما يضمن حركة مرور مستمرة للسيارات والقطار دون تقاطعات سطحية.`,
+    descriptionEn:
+      `Geneifa Bridge is one of the key engineering landmarks of the Light Rail Transit (LRT) project, forming part of the corridor connecting Cairo to new cities and onward to the New Administrative Capital. The bridge was constructed to facilitate the passage of the train over the Geneifa Road, ensuring continuous traffic flow for both vehicles and trains without any at-grade intersections.`,
+    scopeAr: [
+      'أعمال القواعد المسلحة',
+      'أعمال الأعمدة والهامات',
+      'أعمال الكمرات سابقة الإجهاد',
+      'أعمال البلاطات العلوية أعلى الكمر',
+    ],
+    scopeEn: [
+      'Reinforced concrete foundation works',
+      'Column and cap beam works',
+      'Prestressed beam works',
+      'Top slab works over the beams',
+    ],
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى جنيفة/صور المشروع/1.png',
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى جنيفة/صور المشروع/2.png',
@@ -198,6 +296,36 @@ const bridgeProjects: Project[] = [
     titleEn: 'Regwa Bridge Project - High-Speed Rail Bridges',
     typeKey: 'bridges',
     status: 'completed',
+    locationAr: 'طريق مصر – الإسكندرية الصحراوى',
+    locationEn: 'Cairo – Alexandria Desert Road',
+    ownerAr: 'الهيئة العامة للطرق والكبارى',
+    ownerEn: 'General Authority for Roads and Bridges',
+    clientAr: 'SYSTRA CONSULTANT',
+    clientEn: 'SYSTRA CONSULTANT',
+    contractorAr: 'شركة النيل العامة للطرق والكبارى والأعمال البحرية',
+    contractorEn: 'Nile General Company for Roads, Bridges and Marine Works',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `مشروع كبارى القطار السريع هو أول مشروع سكك حديدية كهربائية في مصر، وعند اكتماله سيُصبح سادس أكبر مشروع من نوعه على مستوى العالم. ستربط خطوط السكك الحديدية 60 مدينة في جميع أنحاء البلاد عبر قطارات تصل سرعتها إلى 230 كيلومترًا في الساعة، وسيخدم النظام الركاب والبضائع ويربط المدن والموانئ البحرية والبرية والمدن الأثرية والمواقع السياحية في جميع أنحاء مصر، مما يُسهم في تنمية قطاعات متعددة في الاقتصاد المصري.
+
+يشمل نطاق عملنا إنشاء كوبرى علوى لمسار القطار الكهربائي السريع بطول 180 م وعرض 12 م.`,
+    descriptionEn:
+      `The High-Speed Rail Bridges project is Egypt's first electric railway project and, upon completion, will become the sixth largest project of its kind in the world. The rail network will connect 60 cities across the country with trains reaching speeds of up to 230 km/h. The system will serve both passengers and freight, linking cities, seaports, land ports, historic cities, and tourist sites throughout Egypt, contributing to the development of multiple sectors of the Egyptian economy.
+
+Our scope of work covers the construction of an elevated bridge along the high-speed electric railway corridor, with a total length of 180 m and a width of 12 m.`,
+    scopeAr: [
+      'أعمال القواعد المسلحة',
+      'أعمال الأعمدة والتيجان',
+      'أعمال البلاطات العلوية القطاع الصندوقى سابقة الإجهاد',
+      'أعمال الكوبستات سابقة الصب',
+    ],
+    scopeEn: [
+      'Reinforced concrete foundation works',
+      'Column and crown works',
+      'Prestressed box section top slab works',
+      'Precast parapet works',
+    ],
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى ريجوا - كبارى القطار السريع/صور المشروع/1.jpg',
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى ريجوا - كبارى القطار السريع/صور المشروع/2.jpg',
@@ -210,6 +338,28 @@ const bridgeProjects: Project[] = [
     titleEn: 'Sidi Kerir Bridge Project',
     typeKey: 'bridges',
     status: 'completed',
+    locationAr: 'الإسكندرية',
+    locationEn: 'Alexandria',
+    ownerAr: 'الهيئة العامة للطرق والكبارى',
+    ownerEn: 'General Authority for Roads and Bridges',
+    contractorAr: 'شركة السعداء للمقاولات',
+    contractorEn: 'Al-Saadaa Contracting Company',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `مشروع كوبرى سيدى كرير بغرب محافظة الإسكندرية هو أحد المشروعات القومية الهامة لشبكة الطرق، وقد تم إنشاؤه بهدف رئيسي وهو إنهاء التكدس المروري وفض الاشتباك بين حركة السيارات المتجهة إلى الساحل الشمالي وتلك القادمة من وإلى مدينة ومطار برج العرب.`,
+    descriptionEn:
+      `The Sidi Kerir Bridge project, located in the western part of Alexandria Governorate, is one of the important national road network projects. It was constructed with the primary aim of eliminating traffic congestion and resolving the conflict between vehicles heading to the North Coast and those traveling to and from Borg El Arab city and airport.`,
+    scopeAr: [
+      'أعمال القواعد المسلحة',
+      'أعمال الأعمدة والهامات المسلحة',
+      'أعمال البلاطات العلوية',
+    ],
+    scopeEn: [
+      'Reinforced concrete foundation works',
+      'Reinforced column and cap beam works',
+      'Top slab works',
+    ],
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى سيدى كرير/صور المشروع/1.png',
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى سيدى كرير/صور المشروع/2.png',
@@ -222,6 +372,46 @@ const bridgeProjects: Project[] = [
     titleEn: 'Arab El-Raml - Aghour El-Raml Bridge Project',
     typeKey: 'bridges',
     status: 'completed',
+    locationAr: 'طريق القاهرة – الإسكندرية الزراعى',
+    locationEn: 'Cairo – Alexandria Agricultural Road',
+    ownerAr: 'الهيئة العامة للطرق والكبارى',
+    ownerEn: 'General Authority for Roads and Bridges',
+    clientAr: 'الهيئة العامة للطرق والكبارى',
+    clientEn: 'General Authority for Roads and Bridges',
+    contractorAr: 'شركة النيل العامة للطرق والكبارى والأعمال البحرية',
+    contractorEn: 'Nile General Company for Roads, Bridges and Marine Works',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `مشروع كوبرى عرب الرمل وأجهور الرمل هو واحد من أهم المشروعات القومية التي نُفذت على طريق القاهرة - الإسكندرية الزراعى، ويهدف بشكل أساسي إلى حل أزمات مرورية مزمنة في هذه المنطقة الحيوية، وإلغاء التقاطعات السطحية بين طريق القاهرة - الإسكندرية الزراعى ومداخل قرى عرب الرمل وأجهور الرمل، ومنع التداخل مع حركة القطارات في المناطق المجاورة.
+
+قامت شركة وايزر للمقاولات العامة بتنفيذ عدد (2) كوبرى بواقع كوبرى لكل اتجاه، بطول 1500 م وعرض 12 م للاتجاه الواحد.`,
+    descriptionEn:
+      `The Arab El-Raml and Aghour El-Raml Bridge project is one of the most important national projects executed on the Cairo–Alexandria Agricultural Road. Its primary objectives are to resolve chronic traffic congestion in this vital area, eliminate at-grade intersections between the Cairo–Alexandria Agricultural Road and the entrances to the Arab El-Raml and Aghour El-Raml villages, and prevent interference with train movements in the surrounding areas.
+
+Wiser General Contracting Company executed two bridges — one bridge per direction — each 1,500 m long and 12 m wide.`,
+    scopeAr: [
+      'أعمال الخوازيق للقواعد المسلحة',
+      'أعمال القواعد المسلحة',
+      'أعمال الحوائط المسلحة',
+      'أعمال الأعمدة المونوبايل والأعمدة التيجان',
+      'أعمال الهامات',
+      'أعمال البلاطات على خوازيق',
+      'أعمال الكمرات السابقة الصب',
+      'أعمال البلاطات فوق الكمرات',
+      'أعمال دهانات السافيتو',
+    ],
+    scopeEn: [
+      'Piling works for reinforced foundations',
+      'Reinforced concrete foundation works',
+      'Reinforced wall works',
+      'Monopile column and crown column works',
+      'Cap beam works',
+      'Pile-supported slab works',
+      'Precast beam works',
+      'Slabs over beams',
+      'Saveto coating works',
+    ],
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى عرب الرمل - اجهور الرمل/صور المشروع/1.jpeg',
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى عرب الرمل - اجهور الرمل/صور المشروع/2.jpeg',
@@ -238,6 +428,50 @@ const bridgeProjects: Project[] = [
     titleEn: 'Esneit Overpass on Benha-Mansoura Road Project',
     typeKey: 'bridges',
     status: 'completed',
+    locationAr: 'بنها – المنصورة',
+    locationEn: 'Benha – Mansoura',
+    ownerAr: 'الهيئة العامة للطرق والكبارى',
+    ownerEn: 'General Authority for Roads and Bridges',
+    clientAr: 'النيل للاستشارات الهندسية',
+    clientEn: 'Nile Engineering Consultants',
+    contractorAr: 'شركة النيل العامة للطرق والكبارى والأعمال البحرية',
+    contractorEn: 'Nile General Company for Roads, Bridges and Marine Works',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `مشروع تطوير البر الأيمن للرياح التوفيقي هو واحد من أضخم المشروعات القومية في قطاع النقل بمصر، ويهدف بشكل أساسي إلى حل الأزمات المرورية الخانقة على طريق بنها - المنصورة.
+
+قامت شركة وايزر للمقاولات العامة بتنفيذ كوبرى أسنيت ضمن هذا المشروع بطول 600 م وعرض 13 م.`,
+    descriptionEn:
+      `The Right Bank Development of El-Rayah El-Tawfiky project is one of the largest national infrastructure projects in Egypt's transport sector. Its primary objective is to alleviate severe traffic congestion on the Benha–Mansoura road.
+
+Wiser General Contracting Company executed the Esneit Bridge within this project, with a length of 600 m and a width of 13 m.`,
+    scopeAr: [
+      'أعمال الخوازيق للقواعد المسلحة',
+      'أعمال الخوازيق الساندة',
+      'أعمال القواعد المسلحة',
+      'أعمال الحوائط المسلحة',
+      'أعمال الأعمدة المونوبايل والأعمدة التيجان',
+      'أعمال الهامات',
+      'أعمال البلاطات على خوازيق',
+      'أعمال الكمرات السابقة الصب',
+      'أعمال البلاطات فوق الكمرات',
+      'أعمال بلاطات القطاع الصندوقى',
+      'أعمال دهانات السافيتو',
+    ],
+    scopeEn: [
+      'Piling works for reinforced foundations',
+      'Retaining pile works',
+      'Reinforced concrete foundation works',
+      'Reinforced wall works',
+      'Monopile column and crown column works',
+      'Cap beam works',
+      'Pile-supported slab works',
+      'Precast beam works',
+      'Slabs over beams',
+      'Box section slab works',
+      'Saveto coating works',
+    ],
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى علوى أسنيت على طريق بنها المنصورة/صور المشروع/1.png',
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى علوى أسنيت على طريق بنها المنصورة/صور المشروع/2.png',
@@ -250,6 +484,40 @@ const bridgeProjects: Project[] = [
     titleEn: 'Kafr Shokr Overpass on Benha-Mansoura Road Project',
     typeKey: 'bridges',
     status: 'completed',
+    locationAr: 'بنها – المنصورة',
+    locationEn: 'Benha – Mansoura',
+    ownerAr: 'الهيئة العامة للطرق والكبارى',
+    ownerEn: 'General Authority for Roads and Bridges',
+    clientAr: 'النيل للاستشارات الهندسية',
+    clientEn: 'Nile Engineering Consultants',
+    contractorAr: 'الشركة الوطنية للتشييد - سامكو',
+    contractorEn: 'National Construction Company - SAMCO',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `مشروع تطوير البر الأيمن للرياح التوفيقي هو واحد من أضخم المشروعات القومية في قطاع النقل بمصر، ويهدف بشكل أساسي إلى حل الأزمات المرورية الخانقة على طريق بنها - المنصورة.
+
+قامت شركة وايزر للمقاولات العامة بتنفيذ كوبرى كفر شكر ضمن هذا المشروع بطول 350 م وعرض 12 م.`,
+    descriptionEn:
+      `The Right Bank Development of El-Rayah El-Tawfiky project is one of the largest national infrastructure projects in Egypt's transport sector. Its primary objective is to alleviate severe traffic congestion on the Benha–Mansoura road.
+
+Wiser General Contracting Company executed the Kafr Shokr Bridge within this project, with a length of 350 m and a width of 12 m.`,
+    scopeAr: [
+      'أعمال الخوازيق للقواعد المسلحة',
+      'أعمال القواعد المسلحة',
+      'أعمال الأعمدة المونوبايل والأعمدة التيجان',
+      'أعمال الهامات',
+      'أعمال البلاطات على خوازيق',
+      'أعمال دهانات السافيتو',
+    ],
+    scopeEn: [
+      'Piling works for reinforced foundations',
+      'Reinforced concrete foundation works',
+      'Monopile column and crown column works',
+      'Cap beam works',
+      'Pile-supported slab works',
+      'Saveto coating works',
+    ],
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى علوى كفر شكر على طريق بنها المنصورة/صور المشروع/1.png',
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى علوى كفر شكر على طريق بنها المنصورة/صور المشروع/2.png',
@@ -262,6 +530,36 @@ const bridgeProjects: Project[] = [
     titleEn: 'Adabiya Port Bridge in Suez Project',
     typeKey: 'bridges',
     status: 'completed',
+    locationAr: 'السويس',
+    locationEn: 'Suez',
+    ownerAr: 'الهيئة العامة للطرق والكبارى',
+    ownerEn: 'General Authority for Roads and Bridges',
+    clientAr: 'المهندسون الاستشاريون الدوليون – أ.د. أسامة عقيل',
+    clientEn: 'International Consulting Engineers – Prof. Dr. Osama Oqail',
+    contractorAr: 'شركة النيل العامة للطرق والكبارى والأعمال البحرية',
+    contractorEn: 'Nile General Company for Roads, Bridges and Marine Works',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `يُعدّ مشروع تطوير الطرق والكبارى بمحيط ميناء الأدبية بالسويس جزءًا محوريًا من خطة الدولة لتحويل منطقة "تراسانتا" والموانئ التابعة للمنطقة الاقتصادية لقناة السويس إلى مراكز لوجستية عالمية.
+
+قامت شركة وايزر للمقاولات العامة بتنفيذ كوبرى ميناء الأدبية بطول 600 م وعرض 30 م.`,
+    descriptionEn:
+      `The roads and bridges development project around Adabiya Port in Suez is a pivotal component of the state's plan to transform the "Trasanta" zone and the ports under the Suez Canal Economic Zone into world-class logistics hubs.
+
+Wiser General Contracting Company executed the Adabiya Port Bridge with a length of 600 m and a width of 30 m.`,
+    scopeAr: [
+      'أعمال القواعد المسلحة',
+      'أعمال الأعمدة المونوبايل والأعمدة التيجان',
+      'أعمال الهامات',
+      'أعمال بلاطات القطاع الصندوقى',
+    ],
+    scopeEn: [
+      'Reinforced concrete foundation works',
+      'Monopile column and crown column works',
+      'Cap beam works',
+      'Box section slab works',
+    ],
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى ميناء الادبية بالسويس/صور المشروع/1.png',
     ],
@@ -273,6 +571,34 @@ const bridgeProjects: Project[] = [
     titleEn: 'Abu Tig Elevated Axis over the Nile Project',
     typeKey: 'bridges',
     status: 'completed',
+    locationAr: 'أسيوط',
+    locationEn: 'Assiut',
+    ownerAr: 'الهيئة العامة للطرق والكبارى',
+    ownerEn: 'General Authority for Roads and Bridges',
+    clientAr: 'دار الهندسة',
+    clientEn: 'Dar Al-Handasah',
+    contractorAr: 'شركة النيل العامة للطرق والكبارى والأعمال البحرية',
+    contractorEn: 'Nile General Company for Roads, Bridges and Marine Works',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `يُعتبر محور أبو تيج على النيل بمحافظة أسيوط واحدًا من أهم محاور التنمية في صعيد مصر، وهو جزء من خطة الدولة لتقليل المسافات بين المحاور العرضية على النيل لتصبح 25 كم كحد أقصى.
+
+قامت شركة وايزر للمقاولات العامة بتنفيذ كوبرى أبو تيج بطول 500 م وعرض 24 م.`,
+    descriptionEn:
+      `The Abu Tig elevated axis over the Nile in Assiut Governorate is one of the most important development corridors in Upper Egypt. It is part of the state's plan to reduce the distances between transverse Nile crossings to a maximum of 25 km.
+
+Wiser General Contracting Company executed the Abu Tig Bridge with a length of 500 m and a width of 24 m.`,
+    scopeAr: [
+      'أعمال القواعد المسلحة',
+      'أعمال الأعمدة المونوبايل والأعمدة التيجان',
+      'أعمال الهامات',
+    ],
+    scopeEn: [
+      'Reinforced concrete foundation works',
+      'Monopile column and crown column works',
+      'Cap beam works',
+    ],
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ابو تيج العلوى على النيل/صور المشروع/1.png',
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ابو تيج العلوى على النيل/صور المشروع/2.png',
@@ -288,6 +614,34 @@ const bridgeProjects: Project[] = [
     titleEn: 'Al Ferdous Axis Project',
     typeKey: 'bridges',
     status: 'completed',
+    locationAr: 'القاهرة',
+    locationEn: 'Cairo',
+    ownerAr: 'الجهاز المركزي للتعمير',
+    ownerEn: 'Central Agency for Urban Development',
+    contractorAr: 'الشركة الوطنية للتشييد - سامكو',
+    contractorEn: 'National Construction Company - SAMCO',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `مشروع محور الفردوس — الذي أُطلق عليه رسمياً لاحقاً اسم محور جيهان السادات — هو واحد من أهم المشروعات القومية لشبكة الطرق داخل محافظة القاهرة. يهدف المشروع بالأساس إلى خلق شريان مروري حر يربط قلب العاصمة بالمحاور الطولية الكبرى وصولاً إلى المدن الجديدة.
+
+قامت شركة وايزر للمقاولات العامة بتنفيذ الأعمال المدنية لعدد (2) محور ضمن هذا المشروع.`,
+    descriptionEn:
+      `The Al Ferdous Axis project — officially renamed Al Ferdous Axis later as Jihan El-Sadat Axis — is one of the most important national road network projects within Cairo Governorate. The project's primary objective is to create a free-flowing traffic artery connecting the heart of the capital to the major longitudinal corridors leading to new cities.
+
+Wiser General Contracting Company executed the civil works for two axes within this project.`,
+    scopeAr: [
+      'أعمال القواعد المسلحة',
+      'أعمال الأعمدة والهامات',
+      'أعمال الكمرات سابقة الصب',
+      'أعمال البلاطات العلوية',
+    ],
+    scopeEn: [
+      'Reinforced concrete foundation works',
+      'Column and cap beam works',
+      'Precast beam works',
+      'Top slab works',
+    ],
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور الفردوس/صور المشروع/1.jpg',
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور الفردوس/صور المشروع/2.png',
@@ -300,6 +654,46 @@ const bridgeProjects: Project[] = [
     titleEn: 'Dayrout Elevated Axis over the Nile Project',
     typeKey: 'bridges',
     status: 'completed',
+    locationAr: 'أسيوط',
+    locationEn: 'Assiut',
+    ownerAr: 'الهيئة العامة للطرق والكبارى',
+    ownerEn: 'General Authority for Roads and Bridges',
+    clientAr: 'النيل للاستشارات الهندسية',
+    clientEn: 'Nile Engineering Consultants',
+    contractorAr: 'شركة النيل العامة للطرق والكبارى والأعمال البحرية',
+    contractorEn: 'Nile General Company for Roads, Bridges and Marine Works',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `يُعتبر محور ديروط العلوي على النيل بمحافظة أسيوط واحدًا من أهم المشروعات القومية التي نُفذت في قطاع الطرق والكبارى بصعيد مصر. الهدف الأساسي منه هو خلق شريان حياة جديد يربط شرق النيل بغربه، ويهدف المحور إلى الربط بين الطريق الصحراوى الشرقى (القاهرة - أسوان) والطريق الزراعى الغربى وصولاً إلى الطريق الصحراوى الغربى.
+
+قامت شركة وايزر للمقاولات العامة بتنفيذ عدد (7) أعمال صناعية ضمن هذا المحور.`,
+    descriptionEn:
+      `The Dayrout elevated axis over the Nile in Assiut Governorate is one of the most important national projects executed in the roads and bridges sector in Upper Egypt. Its primary objective is to create a new vital artery connecting the east bank of the Nile to the west bank. The axis aims to link the Eastern Desert Road (Cairo–Aswan) with the Western Agricultural Road, extending through to the Western Desert Road.
+
+Wiser General Contracting Company executed seven structural works within this axis.`,
+    scopeAr: [
+      'أعمال الخوازيق للقواعد المسلحة',
+      'أعمال القواعد المسلحة',
+      'أعمال الحوائط المسلحة',
+      'أعمال الأعمدة المونوبايل والأعمدة التيجان',
+      'أعمال الهامات',
+      'أعمال البلاطات على خوازيق',
+      'أعمال الكمرات السابقة الصب',
+      'أعمال البلاطات فوق الكمرات',
+      'بربخ شرق النيل',
+    ],
+    scopeEn: [
+      'Piling works for reinforced foundations',
+      'Reinforced concrete foundation works',
+      'Reinforced wall works',
+      'Monopile column and crown column works',
+      'Cap beam works',
+      'Pile-supported slab works',
+      'Precast beam works',
+      'Slabs over beams',
+      'East Nile culvert works',
+    ],
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ديروط العلوى على النيل/صور المشروع/1.jpg',
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور ديروط العلوى على النيل/صور المشروع/2.jpeg',
@@ -318,6 +712,38 @@ const bridgeProjects: Project[] = [
     titleEn: 'Administrative Capital Bridge 6 Project',
     typeKey: 'bridges',
     status: 'inProgress',
+    locationAr: 'العاصمة الإدارية',
+    locationEn: 'New Administrative Capital',
+    ownerAr: 'الهيئة القومية للأنفاق',
+    ownerEn: 'National Authority for Tunnels',
+    clientAr: 'مكتب خطيب وعلمى',
+    clientEn: 'Khateeb & Alami',
+    contractorAr: 'شركة النيل العامة للطرق والكبارى والأعمال البحرية',
+    contractorEn: 'Nile General Company for Roads, Bridges and Marine Works',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `يُعتبر القطار الكهربائي الخفيف (LRT) شريانًا حيويًا جديدًا للتنمية في المجتمعات الحضرية الجديدة، وهو أبرز مشروعات النقل الذكى المستدام في مصر، إذ يُسهم في سرعة الانتقال والربط بين القاهرة والمدن الجديدة والربط مع العاصمة الإدارية الجديدة.
+
+يشمل نطاق عملنا أعمال الأساسات الميكانيكية والأعمال المدنية ضمن المرحلة الثالثة للمشروع في المسار ما بين محطة القيادة ومحطة المدينة الأولمبية، والذي يتألف من كوبرى علوى بطول إجمالي يبلغ 1800 مترًا وعرض 10 أمتار.`,
+    descriptionEn:
+      `The Light Rail Transit (LRT) represents a vital new artery for development in new urban communities and is Egypt's most prominent sustainable smart transport project. It contributes to rapid mobility and connectivity between Cairo, new cities, and the New Administrative Capital.
+
+Our scope of work covers mechanical foundation works and civil works within Phase 3 of the project, on the corridor between the Leadership Station and the Olympic City Station. This section consists of an elevated bridge with a total length of 1,800 meters and a width of 10 meters.`,
+    scopeAr: [
+      'أعمال الخوازيق بماكينات الخوازيق الخاصة بالشركة',
+      'أعمال القواعد المسلحة',
+      'أعمال الأعمدة والهامات بالفرم المعدنية الخاصة والمملوكة لشركة وايزر للمقاولات العامة',
+      'أعمال الكمرات سابقة الإجهاد بمختلف أطوالها بالفرم المعدنية الخاصة والمملوكة لشركة وايزر للمقاولات العامة',
+      'أعمال البلاطات العلوية أعلى الكمر',
+    ],
+    scopeEn: [
+      'Piling works using the company\'s own piling machines',
+      'Reinforced concrete foundation works',
+      'Column and cap beam works using Wiser\'s own proprietary metal formwork',
+      'Prestressed beam works of various lengths using Wiser\'s own proprietary metal formwork',
+      'Top slab works over the beams',
+    ],
     images: [
       '/assets/bridges/مشروعات جارية/مشروع كوبرى 6 العاصمة الادارية/صور المشروع/1.jpg',
       '/assets/bridges/مشروعات جارية/مشروع كوبرى 6 العاصمة الادارية/صور المشروع/2.jpg',
@@ -334,6 +760,42 @@ const bridgeProjects: Project[] = [
     titleEn: 'Regional Ring Road Interchange Bridge Project - High-Speed Rail Bridges',
     typeKey: 'bridges',
     status: 'inProgress',
+    locationAr: 'الدائرى الاقليمى',
+    locationEn: 'Regional Ring Road',
+    ownerAr: 'الهيئة العامة للطرق والكبارى',
+    ownerEn: 'General Authority for Roads and Bridges',
+    clientAr: 'PENTA CONSULTANT',
+    clientEn: 'PENTA CONSULTANT',
+    contractorAr: 'شركة النيل العامة للطرق والكبارى والأعمال البحرية',
+    contractorEn: 'Nile General Company for Roads, Bridges and Marine Works',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `مشروع كبارى القطار السريع هو أول مشروع سكك حديدية كهربائية في مصر، وعند اكتماله سيُصبح سادس أكبر مشروع من نوعه على مستوى العالم. ستربط خطوط السكك الحديدية 60 مدينة في جميع أنحاء البلاد عبر قطارات تصل سرعتها إلى 230 كيلومترًا في الساعة، وسيخدم النظام الركاب والبضائع، ويربط المدن والموانئ البحرية والبرية والمدن الأثرية والمواقع السياحية في جميع أنحاء مصر، مما يُسهم في تنمية قطاعات متعددة في الاقتصاد المصري.
+
+يشمل نطاق عملنا إنشاء كبارى علوية على مسار القطار الكهربائي السريع، حيث يتم تنفيذ عدد (2) كوبرى داعم بطول 200 م وعرض 15 م، وعدد (2) كوبرى رئيسي بطول 200 م وعرض 22 م، وذلك عند المحطة (ST191+500) على الطريق الدائرى الاقليمى.
+
+تم الانتهاء من عدد (2) كوبرى الداعمين، وجارٍ حاليًا تنفيذ أعمال كبارى الطريق الرئيسي.`,
+    descriptionEn:
+      `The High-Speed Rail Bridges project is Egypt's first electric railway project and, upon completion, will become the sixth largest project of its kind in the world. The rail network will connect 60 cities across the country with trains reaching speeds of up to 230 km/h. The system will serve both passengers and freight, linking cities, seaports, land ports, historic cities, and tourist sites throughout Egypt, contributing to the development of multiple sectors of the Egyptian economy.
+
+Our scope of work covers the construction of elevated bridges along the high-speed electric railway corridor. The works include two supporting bridges, each 200 m long and 15 m wide, and two main bridges, each 200 m long and 22 m wide, located at station (ST191+500) on the Regional Ring Road.
+
+The two supporting bridges have been completed, and works on the main road bridges are currently underway.`,
+    scopeAr: [
+      'أعمال الخوازيق بالمشروع',
+      'أعمال القواعد المسلحة',
+      'أعمال الأعمدة والهامات بالفرم الخاصة بالشركة',
+      'أعمال الكمرات سابقة الصب',
+      'أعمال البلاطات العلوية القطاع الصندوقى سابقة الإجهاد',
+    ],
+    scopeEn: [
+      'Piling works',
+      'Reinforced concrete foundation works',
+      'Column and cap beam works using the company\'s own formwork',
+      'Precast beam works',
+      'Prestressed box section top slab works',
+    ],
     images: [
       '/assets/bridges/مشروعات جارية/مشروع كوبرى تقاطع الدائرى الاقليمى - كبارى القطار السريع/صور المشروع/IMG-20260414-WA0000.jpg',
       '/assets/bridges/مشروعات جارية/مشروع كوبرى تقاطع الدائرى الاقليمى - كبارى القطار السريع/صور المشروع/IMG-20260414-WA0001.jpg',
@@ -351,6 +813,38 @@ const bridgeProjects: Project[] = [
     titleEn: 'Administrative Capital Bridge 7 Project',
     typeKey: 'bridges',
     status: 'inProgress',
+    locationAr: 'العاصمة الإدارية',
+    locationEn: 'New Administrative Capital',
+    ownerAr: 'الهيئة القومية للأنفاق',
+    ownerEn: 'National Authority for Tunnels',
+    clientAr: 'مكتب خطيب وعلمى',
+    clientEn: 'Khateeb & Alami',
+    contractorAr: 'شركة النيل العامة للإنشاءات والطرق والأعمال البحرية',
+    contractorEn: 'Nile General Company for Construction, Roads and Marine Works',
+    subcontractorAr: 'شركة وايزر للمقاولات العامة',
+    subcontractorEn: 'Wiser General Contracting Company',
+    descriptionAr:
+      `يُعتبر القطار الكهربائي الخفيف (LRT) شريانًا حيويًا جديدًا للتنمية في المجتمعات الحضرية الجديدة، وهو أبرز مشروعات النقل الذكى المستدام في مصر، إذ يُسهم في سرعة الانتقال والربط بين القاهرة والمدن الجديدة والربط مع العاصمة الإدارية الجديدة.
+
+يشمل نطاق عملنا أعمال الأساسات الميكانيكية والأعمال المدنية ضمن المرحلة الثالثة للمشروع في المسار ما بين محطة المدينة الأولمبية ومحطة العاصمة، والذي يتألف من كوبرى علوى بطول إجمالي يبلغ 1650 مترًا وعرض 10 أمتار.`,
+    descriptionEn:
+      `The Light Rail Transit (LRT) represents a vital new artery for development in new urban communities and is Egypt's most prominent sustainable smart transport project. It contributes to rapid mobility and connectivity between Cairo, new cities, and the New Administrative Capital.
+
+Our scope of work covers mechanical foundation works and civil works within Phase 3 of the project, on the corridor between the Olympic City Station and the Capital Station. This section consists of an elevated bridge with a total length of 1,650 meters and a width of 10 meters.`,
+    scopeAr: [
+      'أعمال الخوازيق بالمشروع',
+      'أعمال القواعد المسلحة',
+      'أعمال الأعمدة والهامات بالفرم المعدنية الخاصة والمملوكة لشركة وايزر للمقاولات العامة',
+      'أعمال الكمرات سابقة الإجهاد بمختلف أطوالها بالفرم المعدنية الخاصة والمملوكة لشركة وايزر للمقاولات العامة',
+      'أعمال البلاطات العلوية أعلى الكمر',
+    ],
+    scopeEn: [
+      'Piling works',
+      'Reinforced concrete foundation works',
+      'Column and cap beam works using Wiser\'s own proprietary metal formwork',
+      'Prestressed beam works of various lengths using Wiser\'s own proprietary metal formwork',
+      'Top slab works over the beams',
+    ],
     images: [
       '/assets/bridges/مشروعات جارية/مشروع كوبرى7 العاصمة الادارية/صور المشروع/1.jpg',
       '/assets/bridges/مشروعات جارية/مشروع كوبرى7 العاصمة الادارية/صور المشروع/2.jpg',
@@ -378,17 +872,17 @@ export const projectsData: Project[] = [
     ownerEn: 'Nile University',
     contractorAr: 'شركة وايزر للمقاولات العامة',
     contractorEn: 'Wiser General Contracting Company',
-    year: '2024',
+    year: '2021',
     descriptionAr:
       `مشروع المصنع المصغر أو الـ Micro Factory في جامعة النيل الأهلية بمصر هو أحد المشاريع الرائدة والفريدة من نوعها في المنطقة، وقد أُسس كجزء من المبادرة القومية "رواد النيل" (NilePreneurs) التي يرعاها البنك المركزي المصري، وبالتعاون مع وزارة التخطيط والتنمية الاقتصادية من خلال مشروع رواد 2030.
 
-في عام 2024 تم ترشيح المشروع كأفضل مشروع تجاري في السنة ضمن جوائز BIG 5 Egypt Impact Awards، ووصل للمرحلة النهائية وكان من أفضل 3 مشاريع تجارية في مصر لعام 2024.
+في عام 2024 تم ترشيح المشروع كأفضل مشروع تجاري في السنة ضمن جوائز BIG 5 Egypt Impact Awards، ووصل للمرحلة النهائية وكان من أفضل 3 مشاريع تجارية في مصر لعام 2021.
 
 قامت شركة وايزر للمقاولات العامة بتنفيذ أعمال الورش والمبنى الإداري، حيث تم تجهيز وتشطيب عدد 5 ورش، كما تم إنشاء المبنى الإداري باستخدام عدد 9 حاويات مكونة من دورين.`,
     descriptionEn:
       `The Micro Factory project at Nile University in Egypt is one of the leading and most distinctive projects of its kind in the region. It was established as part of the national NilePreneurs initiative, sponsored by the Central Bank of Egypt, in cooperation with the Ministry of Planning and Economic Development through the Rowad 2030 project.
 
-In 2024, the project was nominated for Commercial Project of the Year at the BIG 5 Egypt Impact Awards. It reached the final stage and was ranked among the top three commercial projects in Egypt for 2024.
+In 2021, the project was nominated for Commercial Project of the Year at the BIG 5 Egypt Impact Awards. It reached the final stage and was ranked among the top three commercial projects in Egypt for 2021.
 
 Wiser General Contracting Company executed the workshop and administrative building works. The scope included fitting out and finishing five workshops, as well as constructing a two-story administrative building using nine containers.`,
     scopeAr: [
