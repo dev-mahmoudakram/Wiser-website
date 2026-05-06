@@ -51,7 +51,10 @@ export default async function ProjectDetailPage({
   const fallbackDescription = isAr
     ? 'سيتم إضافة وصف المشروع قريباً.'
     : 'The project description will be added soon.';
-  const mainImage = project.thumbnail ?? project.images[0];
+  const encodeAssetPath = (p: string) => p.split('/').map(encodeURIComponent).join('/');
+  const mainImage = (project.thumbnail ?? project.images[0])
+    ? encodeAssetPath(project.thumbnail ?? project.images[0])
+    : undefined;
   const projectInfo = [
     { label: isAr ? 'النوع' : 'Type', value: category },
     { label: isAr ? 'الحالة' : 'Status', value: status },
@@ -157,12 +160,12 @@ export default async function ProjectDetailPage({
           <div className={`${getGalleryGridClass(project.images.length)} mx-auto items-start gap-4 md:gap-6`}>
              {project.images.length > 0 ? project.images.map((img: string, index: number) => {
                 return (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="relative self-start aspect-video overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5 hover:shadow-xl transition-shadow duration-300 group"
                   >
-                    <Image 
-                      src={img}
+                    <Image
+                      src={encodeAssetPath(img)}
                       alt={`${title} ${index + 1}`}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"

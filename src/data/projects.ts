@@ -39,6 +39,7 @@ export type Project = {
   thumbnail?: string;
   images: string[];
   featured?: boolean;
+  hidden?: boolean;
 };
 
 const microFactoryImages = [
@@ -242,6 +243,7 @@ Wiser General Contracting Company executed two bridges within this project:
     titleEn: 'Borg El Arab Bridge Project',
     typeKey: 'bridges',
     status: 'completed',
+    hidden: true,
     images: [
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى برج العرب/صور المشروع/1.png',
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع كوبرى برج العرب/صور المشروع/2.png',
@@ -338,6 +340,7 @@ Our scope of work covers the construction of an elevated bridge along the high-s
     titleEn: 'Sidi Kerir Bridge Project',
     typeKey: 'bridges',
     status: 'completed',
+    hidden: true,
     locationAr: 'الإسكندرية',
     locationEn: 'Alexandria',
     ownerAr: 'الهيئة العامة للطرق والكبارى',
@@ -858,7 +861,7 @@ Our scope of work covers mechanical foundation works and civil works within Phas
   },
 ];
 
-export const projectsData: Project[] = [
+const allProjectsData: Project[] = [
   {
     id: 1,
     slug: 'micro-factory-nile-university',
@@ -1041,6 +1044,8 @@ Wiser General Contracting Company executed an integrated scope of civil, archite
   ...bridgeProjects,
 ];
 
+export const projectsData = allProjectsData.filter((p) => !p.hidden);
+
 export const featuredProjectsData = projectsData.filter((project) => project.featured);
 
 export function getProjectBySlug(slug: string) {
@@ -1057,6 +1062,6 @@ export function getProjectStatusLabel(statusKey: ProjectStatusKey, locale: strin
   return (locale === 'ar' ? status?.labelAr : status?.labelEn) ?? statusKey;
 }
 
-export function getProjectImageSize(_src: string) {
+export function getProjectImageSize() {
   return { width: 1600, height: 900 };
 }
