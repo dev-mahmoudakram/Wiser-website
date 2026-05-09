@@ -136,6 +136,12 @@ const sadatAccountingOfficeImages = [
   '/assets/التشطيبات/مكتب محاسبة مدينة السادات/WhatsApp Image 2026-04-14 at 1.33.12 PM.jpeg',
 ];
 
+const lunaW01Images = [
+  '/assets/real-estate/Luna-W01/2.jpeg',
+  '/assets/real-estate/Luna-W01/3.jpg.jpeg',
+  '/assets/real-estate/Luna-W01/4.jpeg',
+];
+
 const bridgeProjects: Project[] = [
   {
     id: 8,
@@ -650,6 +656,9 @@ Wiser General Contracting Company executed the civil works for two axes within t
       '/assets/bridges/مشروعات تم الانتهاء منها/مشروع محور الفردوس/صور المشروع/2.png',
     ],
   },
+];
+
+const priorityBridgeProjects: Project[] = [
   {
     id: 20,
     slug: 'bridge-project-13',
@@ -862,6 +871,7 @@ Our scope of work covers mechanical foundation works and civil works within Phas
 ];
 
 const allProjectsData: Project[] = [
+  ...priorityBridgeProjects,
   {
     id: 1,
     slug: 'micro-factory-nile-university',
@@ -1039,6 +1049,66 @@ Wiser General Contracting Company executed an integrated scope of civil, archite
     locationAr: 'مدينة السادات',
     locationEn: 'Sadat City',
     images: sadatAccountingOfficeImages,
+    featured: true,
+  },
+  {
+    id: 24,
+    slug: 'luna-w01',
+    titleAr: 'مشروع لونا',
+    titleEn: 'Luna Project',
+    typeKey: 'realEstateDevelopment',
+    status: 'inProgress',
+    locationAr: 'الحي 17 – حي الواحة، العاشر من رمضان',
+    locationEn: 'District 17 – Al-Waha, 10th of Ramadan City',
+    descriptionAr: `في وايزر… إحنا مش بنقدّم مشروع وخلاص، إحنا بنبني قيمة حقيقية بتبدأ من الفكرة… وبتكمل في كل تفصيلة على أرض الواقع.
+
+16 سنة خبرة هندسية في قلب مواقع التنفيذ، و8 سنوات تخصص فعلي في التطوير العقاري والتشطيبات، خلّتنا نفهم السوق مش من برّه… لكن من جوّه، بكل تفاصيله وتحدياته.
+
+مشروع لونا — استثمار عقاري راقٍ يجمع بين الفخامة والعائد المجزي، صُمِّم ليكون معياراً جديداً في سوق العقارات الفاخرة. يقع في قلب الحي 17 – حي الواحة، على بعد 10 دقائق من الموقف الجديد ومستشفى الجامعة وجامعة الابتكار وكارفور.
+
+تم الانتهاء من الخرسانات والمباني بالكامل بخرسانة جاهزة. الاستلام خلال 4 شهور.
+
+شقق للبيع بمساحات تبدأ من 114 م² إلى 150 م² — نصف تشطيب متكامل يشمل: تأسيس كهرباء، مواسير صرف للتكييفات، عداد كهرباء ومياه، محارة داخلية، باب مصفح، مدخل فاخر، أسانسير، سيستم كاميرات، واجهات مودرن، عزل مائي وحراري للسطح.
+
+أنظمة السداد: مقدم 50% والباقي على 12 شهر — خصم 10% للكاش.`,
+    descriptionEn: `At Wiser, we don't just deliver projects — we build real value from concept through every last detail on the ground.
+
+16 years of engineering expertise at the heart of execution sites, and 8 years of specialized experience in real estate development and finishing, give us an insider's understanding of the market and all its challenges.
+
+Luna Project — a premium real estate investment combining luxury and strong returns, designed to set a new standard in the upscale property market. Located in the heart of District 17 – Al-Waha, just 10 minutes from the new bus terminal, University Hospital, Innovation University, and Carrefour.
+
+Concrete structure fully completed using ready-mix concrete. Delivery within 4 months.
+
+Apartments for sale ranging from 114 m² to 150 m² — semi-finished with full fitout including: electrical rough-in, A/C drainage pipes, electricity and water meters, interior plastering, armored door, luxury entrance, elevator, camera system, modern facades, and thermal/waterproof roof insulation.
+
+Payment plans: 50% down payment, balance over 12 months — 10% discount for cash.`,
+    scopeAr: [
+      'شقق الأدوار المتكررة: 150 م² – 3 غرف، مطبخ، 2 حمام، ريسبشن، تراس',
+      'شقة أرضي: 128 م² – 3 غرف، مطبخ، حمام، ريسبشن كبير + حديقة خاصة 118 م²',
+      'روف 114 م²: 2 غرف، مطبخ، حمام + تراس 36 م² بإطلالة مفتوحة',
+      'روف 228 م²: 2 غرف، مطبخ، حمام + تراس 72 م² بإطلالة مفتوحة',
+      'تأسيس كهرباء ومواسير صرف للتكييفات',
+      'عداد كهرباء ومياه',
+      'محارة داخلية وباب مصفح',
+      'مدخل فاخر وأسانسير',
+      'سيستم كاميرات متطور',
+      'واجهات مودرن وعزل مائي وحراري للسطح',
+      'مناطق خضراء وحديقة للدور الأرضي',
+    ],
+    scopeEn: [
+      'Repeated floor apartments: 150 m² – 3 bedrooms, kitchen, 2 bathrooms, reception, terrace',
+      'Ground floor apartment: 128 m² – 3 bedrooms, kitchen, bathroom, large reception + 118 m² private garden',
+      'Roof 114 m²: 2 bedrooms, kitchen, bathroom + 36 m² open-view terrace',
+      'Roof 228 m²: 2 bedrooms, kitchen, bathroom + 72 m² open-view terrace',
+      'Electrical rough-in and A/C drainage pipes',
+      'Electricity and water meters',
+      'Interior plastering and armored door',
+      'Luxury entrance and elevator',
+      'Advanced camera security system',
+      'Modern facades and thermal/waterproof roof insulation',
+      'Green areas and private garden for ground floor',
+    ],
+    images: lunaW01Images,
     featured: true,
   },
   ...bridgeProjects,

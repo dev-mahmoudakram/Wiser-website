@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { getProjectBySlug, getProjectStatusLabel, getProjectTypeLabel, projectsData } from '@/data/projects';
+import ProjectGallery from '@/components/projects/ProjectGallery';
 import { routing } from '@/i18n/routing';
 
 export function generateStaticParams() {
@@ -157,28 +158,12 @@ export default async function ProjectDetailPage({
             </p>
           </div>
 
-          <div className={`${getGalleryGridClass(project.images.length)} mx-auto items-start gap-4 md:gap-6`}>
-             {project.images.length > 0 ? project.images.map((img: string, index: number) => {
-                return (
-                  <div
-                    key={index}
-                    className="relative self-start aspect-video overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5 hover:shadow-xl transition-shadow duration-300 group"
-                  >
-                    <Image
-                      src={encodeAssetPath(img)}
-                      alt={`${title} ${index + 1}`}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  </div>
-                );
-             }) : (
-                <div className="col-span-full rounded-3xl bg-white p-10 text-center text-wiser-gray border border-wiser-gray/10">
-                  {isAr ? 'لا توجد صور متاحة لهذا المشروع حالياً.' : 'No images are available for this project yet.'}
-                </div>
-             )}
-          </div>
+          <ProjectGallery
+            images={project.images.map(encodeAssetPath)}
+            title={title}
+            gridClass={getGalleryGridClass(project.images.length)}
+            isAr={isAr}
+          />
         </div>
       </section>
     </div>
