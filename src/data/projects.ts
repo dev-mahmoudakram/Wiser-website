@@ -140,6 +140,12 @@ const lunaW01Images = [
   '/assets/real-estate/Luna-W01/2.jpeg',
   '/assets/real-estate/Luna-W01/3.jpg.jpeg',
   '/assets/real-estate/Luna-W01/4.jpeg',
+  '/assets/real-estate/Luna-W01/1-land-floor-3d/1.jpg',
+  '/assets/real-estate/Luna-W01/1-land-floor-3d/2.png',
+  '/assets/real-estate/Luna-W01/1-land-floor-3d/ground 5.jpeg',
+  '/assets/real-estate/Luna-W01/2-first-floor-3d/1.jpeg',
+  '/assets/real-estate/Luna-W01/2-first-floor-3d/2.jpeg',
+  '/assets/real-estate/Luna-W01/2-first-floor-3d/3.jpeg',
 ];
 
 const bridgeProjects: Project[] = [
@@ -1054,8 +1060,8 @@ Wiser General Contracting Company executed an integrated scope of civil, archite
   {
     id: 24,
     slug: 'luna-w01',
-    titleAr: 'مشروع لونا',
-    titleEn: 'Luna Project',
+    titleAr: 'لونا مبنى 1',
+    titleEn: 'Luna Building 1',
     typeKey: 'realEstateDevelopment',
     status: 'inProgress',
     locationAr: 'الحي 17 – حي الواحة، العاشر من رمضان',
@@ -1064,7 +1070,7 @@ Wiser General Contracting Company executed an integrated scope of civil, archite
 
 16 سنة خبرة هندسية في قلب مواقع التنفيذ، و8 سنوات تخصص فعلي في التطوير العقاري والتشطيبات، خلّتنا نفهم السوق مش من برّه… لكن من جوّه، بكل تفاصيله وتحدياته.
 
-مشروع لونا — استثمار عقاري راقٍ يجمع بين الفخامة والعائد المجزي، صُمِّم ليكون معياراً جديداً في سوق العقارات الفاخرة. يقع في قلب الحي 17 – حي الواحة، على بعد 10 دقائق من الموقف الجديد ومستشفى الجامعة وجامعة الابتكار وكارفور.
+لونا مبنى 1 — استثمار عقاري راقٍ يجمع بين الفخامة والعائد المجزي، صُمِّم ليكون معياراً جديداً في سوق العقارات الفاخرة. يقع في قلب الحي 17 – حي الواحة، على بعد 10 دقائق من الموقف الجديد ومستشفى الجامعة وجامعة الابتكار وكارفور.
 
 تم الانتهاء من الخرسانات والمباني بالكامل بخرسانة جاهزة. الاستلام خلال 4 شهور.
 
@@ -1075,7 +1081,7 @@ Wiser General Contracting Company executed an integrated scope of civil, archite
 
 16 years of engineering expertise at the heart of execution sites, and 8 years of specialized experience in real estate development and finishing, give us an insider's understanding of the market and all its challenges.
 
-Luna Project — a premium real estate investment combining luxury and strong returns, designed to set a new standard in the upscale property market. Located in the heart of District 17 – Al-Waha, just 10 minutes from the new bus terminal, University Hospital, Innovation University, and Carrefour.
+Luna Building 1 — a premium real estate investment combining luxury and strong returns, designed to set a new standard in the upscale property market. Located in the heart of District 17 – Al-Waha, just 10 minutes from the new bus terminal, University Hospital, Innovation University, and Carrefour.
 
 Concrete structure fully completed using ready-mix concrete. Delivery within 4 months.
 
