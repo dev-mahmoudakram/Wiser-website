@@ -1115,7 +1115,6 @@ Payment plans: 50% down payment, balance over 12 months — 10% discount for cas
       'Green areas and private garden for ground floor',
     ],
     images: lunaW01Images,
-    featured: true,
   },
   ...bridgeProjects,
 ];

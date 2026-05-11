@@ -10,6 +10,7 @@ import Navbar from '@/components/layout/Navbar';
 import PreFooterCTA from '@/components/layout/PreFooterCTA';
 import Footer from '@/components/layout/Footer';
 import ScrollToTop from '@/components/layout/ScrollToTop';
+import WhatsAppBubble from '@/components/layout/WhatsAppBubble';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -73,6 +74,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Navbar />
           <div className="relative flex flex-col min-h-screen overflow-x-hidden">
+            <WhatsAppBubble />
             <main className="flex-grow relative">
               {children}
               <PreFooterCTA />
