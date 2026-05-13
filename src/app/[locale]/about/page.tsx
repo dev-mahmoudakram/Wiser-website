@@ -1,8 +1,6 @@
 import { setRequestLocale } from 'next-intl/server';
-import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
-import { Target, Eye, Lightbulb, ShieldCheck, Gem, Quote } from 'lucide-react';
+import { Target, Eye, Lightbulb, ShieldCheck, Gem } from 'lucide-react';
 import Counter from '@/components/ui/Counter';
 import PageHero from '@/components/layout/PageHero';
 
@@ -10,38 +8,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const t = await getTranslations('Navigation');
   const isAr = locale === 'ar';
-
-  const team = [
-    { 
-      name: isAr ? 'م. سعود القحطاني' : 'Eng. Saud Al-Qahtani', 
-      role: isAr ? 'مدير التصميم' : 'Design Manager', 
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop' 
-    },
-    { 
-      name: isAr ? 'م. عبدالرحمن الحربي' : 'Eng. Abdulrahman Al-Harbi', 
-      role: isAr ? 'مدير العمليات' : 'Operations Manager', 
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop' 
-    },
-    { 
-      name: isAr ? 'م. فهد السالم' : 'Eng. Fahad Al-Salem', 
-      role: isAr ? 'مدير المشاريع' : 'Projects Manager', 
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop' 
-    },
-    { 
-      name: isAr ? 'م. خالد العمري' : 'Eng. Khalid Al-Amri', 
-      role: isAr ? 'المدير العام' : 'General Manager', 
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop' 
-    },
-  ];
-
-  const testimonials = [
-    { name: isAr ? 'عبدالله الشمري' : 'Abdullah Al-Shammari', title: isAr ? 'مستثمر عقاري' : 'Real Estate Investor', text: isAr ? 'الاحترافية والدقة في العمل هي ما يميز وايزر عن غيرها. ننصح بالتعامل معهم بشدة' : 'Professionalism and accuracy at work are what distinguish Wiser from others. Highly recommend working with them.' },
-    { name: isAr ? 'محمد الدوسري' : 'Mohammed Al-Dossari', title: isAr ? 'مدير شركة عقارية' : 'Real Estate Company Manager', text: isAr ? 'فريق محترف ومتعاون، حوّلوا رؤيتنا إلى واقع يفوق الخيال بتصاميم عصرية مبتكرة' : 'A professional and cooperative team, turned our vision into reality beyond imagination with modern innovative designs.' },
-    { name: isAr ? 'أحمد المطيري' : 'Ahmed Al-Mutairi', title: isAr ? 'صاحب فيلا الياسمين' : 'Owner of Yasmin Villa', text: isAr ? 'تعاملنا مع وايزر كان من أفضل القرارات. جودة التنفيذ والالتزام بالمواعيد فاقت توقعاتنا' : 'Working with Wiser was one of our best decisions. The execution quality and commitment to deadlines exceeded our expectations.' }
-  ];
-
   const values = [
     { title: isAr ? 'الابتكار' : 'Innovation', text: isAr ? 'نوظف أحدث التقنيات والأساليب المعمارية لتقديم حلول متميزة.' : 'We employ the latest technologies and architectural methods to provide distinct solutions.', Icon: Lightbulb },
     { title: isAr ? 'الالتزام' : 'Commitment', text: isAr ? 'نحرص على تسليم المشاريع في الوقت المحدد وبالميزانية المتفق عليها.' : 'We are keen to deliver projects on time and within the agreed budget.', Icon: Target },
@@ -100,19 +67,19 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         <div className="w-full bg-wiser-dark-teal py-16 mt-24">
           <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
              <div>
-                <h3 className="text-5xl font-bold mb-2"><Counter value={15} />+</h3>
+                <h3 className="text-5xl font-bold mb-2"><Counter value={30} />+</h3>
                 <p className="text-white/80 text-lg uppercase tracking-wide">{isAr ? 'مهندس محترف' : 'Expert Engineer'}</p>
              </div>
              <div>
-                <h3 className="text-5xl font-bold mb-2"><Counter value={30} />+</h3>
+                <h3 className="text-5xl font-bold mb-2"><Counter value={120} />+</h3>
                 <p className="text-white/80 text-lg uppercase tracking-wide">{isAr ? 'عميل سعيد' : 'Happy Client'}</p>
              </div>
              <div>
-                <h3 className="text-5xl font-bold mb-2"><Counter value={50} />+</h3>
+                <h3 className="text-5xl font-bold mb-2"><Counter value={22} />+</h3>
                 <p className="text-white/80 text-lg uppercase tracking-wide">{isAr ? 'مشروع منجز' : 'Completed Project'}</p>
              </div>
              <div>
-                <h3 className="text-5xl font-bold mb-2"><Counter value={10} />+</h3>
+                <h3 className="text-5xl font-bold mb-2"><Counter value={16} />+</h3>
                 <p className="text-white/80 text-lg uppercase tracking-wide">{isAr ? 'سنوات خبرة' : 'Years Experience'}</p>
              </div>
           </div>
@@ -143,8 +110,8 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                  <h3 className="text-2xl font-bold text-wiser-dark-teal mb-4">{isAr ? 'رؤيتنا' : 'Our Vision'}</h3>
                  <p className="text-wiser-gray text-lg leading-relaxed max-w-sm">
                     {isAr 
-                      ? 'أن نكون الشركة الرائدة في قطاع المقاولات بالمملكة العربية السعودية، ونساهم في بناء مستقبل عمراني يجمع بين الأصالة والحداثة.'
-                      : 'To be the leading company in the contracting sector in Saudi Arabia, contributing to building an urban future that combines authenticity and modernity.'}
+                      ? 'أن نكون الشركة الرائدة في قطاع المقاولات بمصر، ونساهم في بناء مستقبل عمراني يجمع بين الأصالة والحداثة.'
+                      : 'To be the leading company in the contracting sector in Egypt, contributing to building an urban future that combines authenticity and modernity.'}
                  </p>
               </div>
            </div>
@@ -166,72 +133,6 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                    <p className="text-wiser-gray/80 text-sm leading-relaxed">{v.text}</p>
                 </div>
              ))}
-           </div>
-        </div>
-      </section>
-
-      {/* 4. Team Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-           {/* Section Header */}
-           <div className="text-center mb-16">
-              <span className="text-wiser-teal font-bold tracking-wider text-sm mb-3 block">{isAr ? 'فريقنا' : 'Our Team'}</span>
-              <h2 className="text-4xl font-bold text-wiser-dark-teal">{isAr ? 'الكفاءات خلف كل مشروع' : 'The Competencies Behind Every Project'}</h2>
-           </div>
-
-           {/* Team Grid */}
-           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {team.map((member, i) => (
-                 <div key={i} className="flex flex-col items-center group cursor-pointer">
-                    <div className="relative w-full aspect-[3/4] mb-6 rounded-2xl overflow-hidden shadow-sm group-hover:shadow-xl transition-shadow">
-                       <Image 
-                         src={member.image} 
-                         alt={member.name} 
-                         fill 
-                         className="object-cover transition-transform duration-700 group-hover:scale-105"
-                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                       />
-                       {/* Subtle overlay */}
-                       <div className="absolute inset-0 bg-wiser-dark-teal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                    <h3 className="text-xl font-bold text-wiser-dark-teal text-center mb-2">{member.name}</h3>
-                    <p className="text-wiser-teal font-medium text-center">{member.role}</p>
-                 </div>
-              ))}
-           </div>
-        </div>
-      </section>
-
-      {/* 5. Testimonials Section */}
-      <section className="py-24 bg-[#fcfbf9]">
-        <div className="container mx-auto px-4 max-w-7xl">
-           {/* Section Header */}
-           <div className="text-center mb-16">
-              <span className="text-wiser-teal font-bold tracking-wider text-sm mb-3 block">{isAr ? 'آراء العملاء' : 'Client Reviews'}</span>
-              <h2 className="text-4xl font-bold text-wiser-dark-teal">{isAr ? 'ماذا يقول عملاؤنا' : 'What Our Clients Say'}</h2>
-           </div>
-
-           {/* Grid Layout */}
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((tItem, i) => (
-                 <div key={i} className="bg-white rounded-xl p-8 md:p-10 shadow-sm border border-gray-100 flex flex-col h-full hover:shadow-lg transition-shadow">
-                    {/* Elegant Serif Quote SVG */}
-                    <div className={`mb-6 text-wiser-teal/20 ${isAr ? 'transform -scale-x-100' : ''}`}>
-                       <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-                          <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                       </svg>
-                    </div>
-                    
-                    <p className="text-wiser-gray text-lg leading-relaxed flex-grow mb-8">
-                       {tItem.text}
-                    </p>
-                    
-                    <div className={`mt-auto border-t border-gray-50 pt-6 ${isAr ? 'text-right' : 'text-left'}`}>
-                       <h4 className="text-xl font-bold text-wiser-dark-teal pb-1">{tItem.name}</h4>
-                       <p className="text-wiser-gray/70 text-sm">{tItem.title}</p>
-                    </div>
-                 </div>
-              ))}
            </div>
         </div>
       </section>

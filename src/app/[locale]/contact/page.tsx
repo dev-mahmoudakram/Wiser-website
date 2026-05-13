@@ -2,8 +2,6 @@ import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import ContactForm from '@/components/contact/ContactForm';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
-import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
 import PageHero from '@/components/layout/PageHero';
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -11,7 +9,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   setRequestLocale(locale);
 
   const t = await getTranslations('Contact');
-  const nt = await getTranslations('Navigation');
   const isAr = locale === 'ar';
 
   const contactDetails = [
@@ -23,9 +20,12 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     {
       icon: <Phone className="transition-colors" size={24} />,
       label: t('info.phone'),
-      value: t('info.phoneValue'),
-      href: 'tel:+201066772625',
-      ltr: true,
+      value: undefined as string | undefined,
+      phones: [
+        { value: t('info.phoneValue'),  href: 'tel:+201066772625' },
+        { value: t('info.phoneValue2'), href: 'tel:+201019191208' },
+        { value: t('info.phoneValue3'), href: 'tel:+201090383000' },
+      ],
     },
     {
       icon: <Mail className="transition-colors" size={24} />,
@@ -63,9 +63,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
             {/* Info Column */}
             <div className="lg:col-span-12 xl:col-span-5 h-full">
-              <div className="h-full flex flex-col justify-around">
+              <div className="h-full flex flex-col justify-around gap-4 xl:gap-0">
                 {contactDetails.map((detail, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="group bg-white p-6 rounded-2xl shadow-sm border border-wiser-dark-teal/5 flex items-center gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                   >
@@ -78,7 +78,20 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                       <h3 className="text-xs font-bold text-wiser-dark-teal/40 uppercase tracking-[0.2em] mb-1">
                         {detail.label}
                       </h3>
-                      {detail.href ? (
+                      {'phones' in detail && detail.phones ? (
+                        <div className="flex flex-col gap-0.5">
+                          {detail.phones.map((p) => (
+                            <a
+                              key={p.href}
+                              href={p.href}
+                              dir="ltr"
+                              className="inline-block text-left text-lg font-bold text-wiser-dark-teal hover:text-wiser-gold transition-colors [unicode-bidi:isolate]"
+                            >
+                              {p.value}
+                            </a>
+                          ))}
+                        </div>
+                      ) : detail.href ? (
                         <a
                           href={detail.href}
                           dir={detail.ltr ? 'ltr' : undefined}
@@ -100,13 +113,14 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
           {/* Full Width Map Section */}
           <div className="mt-16 relative h-[450px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white group">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.834176749168!2d31.746357099999997!3d30.298782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1457fd65bf255409%3A0x7bcbda5a3fa4f5a9!2z2LTYsdmD2Kkg2YjYp9mK2LLYsSDZhNmE2YXZgtin2YjZhNin2Kog2KfZhNi52KfZhdip!5e0!3m2!1sen!2seg!4v1777980398528!5m2!1sen!2seg" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0, filter: 'grayscale(0%) contrast(1) brightness(1) invert(0)' }} 
-              allowFullScreen 
-              loading="lazy" 
+            <iframe
+              title={isAr ? 'موقع الشركة على الخريطة' : 'Company location on map'}
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.834176749168!2d31.746357099999997!3d30.298782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1457fd65bf255409%3A0x7bcbda5a3fa4f5a9!2z2LTYsdmD2Kkg2YjYp9mK2LLYsSDZhNmE2YXZgtin2YjZhNin2Kog2KfZhNi52KfZhdip!5e0!3m2!1sen!2seg!4v1777980398528!5m2!1sen!2seg"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: 'grayscale(0%) contrast(1) brightness(1) invert(0)' }}
+              allowFullScreen
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="grayscale hover:grayscale-0 transition-all duration-1000"
             />

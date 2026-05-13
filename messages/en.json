@@ -66,7 +66,7 @@
     "contact": "Contact Us"
   },
   "Footer": {
-    "description": "Pioneering excellence in construction, real estate development, and high-end interior and exterior design across Saudi Arabia.",
+    "description": "Pioneering excellence in construction, real estate development, and high-end interior and exterior design across Egypt.",
     "quickLinks": "Quick Links",
     "contactUs": "Contact Us",
     "social": "Social",
@@ -92,8 +92,10 @@
       "title": "Contact Information",
       "address": "Address",
       "addressValue": "7PXW+GG9, Grand Mall, Jordanian Road, 10th of Ramadan City 1, Al-Sharqia Governorate",
-      "phone": "Phone Number",
+      "phone": "Phone Numbers",
       "phoneValue": "+20 10 66772625",
+      "phoneValue2": "+20 10 19191208",
+      "phoneValue3": "+20 10 90383000",
       "email": "Email Address",
       "emailValue": "info@wiser-contracting.com",
       "hours": "Working Hours",

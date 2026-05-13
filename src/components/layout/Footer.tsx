@@ -55,6 +55,20 @@ export default function Footer() {
                 >
                   +20 10 66772625
                 </a>
+                <a
+                  href="tel:+201019191208"
+                  dir="ltr"
+                  className="inline-block text-left hover:text-white transition-colors text-sm font-light [unicode-bidi:isolate]"
+                >
+                  +20 10 19191208
+                </a>
+                <a
+                  href="tel:+201090383000"
+                  dir="ltr"
+                  className="inline-block text-left hover:text-white transition-colors text-sm font-light [unicode-bidi:isolate]"
+                >
+                  +20 10 90383000
+                </a>
               </div>
             </div>
 
