@@ -6,10 +6,10 @@ import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const stats = [
-  { key: 'projects', target: 50, suffix: '+' },
-  { key: 'years', target: 10, suffix: '+' },
-  { key: 'engineers', target: 15, suffix: '+' },
-  { key: 'clients', target: 30, suffix: '+' },
+  { key: 'projects', target: 22, suffix: '+' },
+  { key: 'years', target: 16, suffix: '+' },
+  { key: 'engineers', target: 30, suffix: '+' },
+  { key: 'clients', target: 120, suffix: '+' },
 ];
 
 export default function AboutSection() {
