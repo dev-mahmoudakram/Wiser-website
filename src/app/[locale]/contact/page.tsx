@@ -22,9 +22,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       label: t('info.phone'),
       value: undefined as string | undefined,
       phones: [
-        { value: t('info.phoneValue'),  href: 'tel:+201066772625' },
         { value: t('info.phoneValue2'), href: 'tel:+201019191208' },
-        { value: t('info.phoneValue3'), href: 'tel:+201090383000' },
+        { value: t('info.phoneValue3'), href: 'tel:+201090380003' },
       ],
     },
     {
