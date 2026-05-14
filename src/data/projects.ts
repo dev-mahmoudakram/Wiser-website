@@ -1025,8 +1025,8 @@ Wiser General Contracting Company executed an integrated scope of civil, archite
   {
     id: 5,
     slug: 'hamdy-villa-neighborhood-88',
-    titleAr: 'م. حمدي فيلا مجاورة 88',
-    titleEn: 'Engineer Hamdy Villa - Neighborhood 88',
+    titleAr: 'فيلا مجاورة 88',
+    titleEn: 'Villa - Neighborhood 88',
     typeKey: 'finishing',
     status: 'completed',
     locationAr: 'مجاورة 88',
@@ -1036,8 +1036,8 @@ Wiser General Contracting Company executed an integrated scope of civil, archite
   {
     id: 6,
     slug: 'district-15-house-276',
-    titleAr: 'مشروع الحي 15 بيت 276',
-    titleEn: 'District 15 House 276',
+    titleAr: 'فيلا الحي 15',
+    titleEn: 'District 15 villa 276',
     typeKey: 'finishing',
     status: 'completed',
     locationAr: 'الحي 15',
