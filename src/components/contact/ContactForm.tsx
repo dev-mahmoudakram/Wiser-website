@@ -9,16 +9,33 @@ export default function ContactForm() {
   const t = useTranslations('Contact.form');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setIsError(false);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error('Failed');
       setIsSuccess(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
       setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+    } catch {
+      setIsError(true);
+      setTimeout(() => setIsError(false), 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -45,11 +62,14 @@ export default function ContactForm() {
               <User size={14} className="text-wiser-gold" />
               {t('name')}
             </label>
-            <input 
+            <input
               required
-              type="text" 
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="John Doe"
-              className="w-full px-5 py-4 rounded-xl border border-wiser-dark-teal/10 bg-white/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-wiser-gold/20 focus:border-wiser-gold transition-all duration-300" 
+              className="w-full px-5 py-4 rounded-xl border border-wiser-dark-teal/10 bg-white/50 text-wiser-teal focus:bg-white focus:outline-none focus:ring-2 focus:ring-wiser-gold/20 focus:border-wiser-gold transition-all duration-300"
             />
           </div>
           <div className="space-y-2">
@@ -57,11 +77,14 @@ export default function ContactForm() {
               <Mail size={14} className="text-wiser-gold" />
               {t('email')}
             </label>
-            <input 
+            <input
               required
-              type="email" 
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="john@example.com"
-              className="w-full px-5 py-4 rounded-xl border border-wiser-dark-teal/10 bg-white/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-wiser-gold/20 focus:border-wiser-gold transition-all duration-300" 
+              className="w-full px-5 py-4 rounded-xl border border-wiser-dark-teal/10 bg-white/50 text-wiser-teal focus:bg-white focus:outline-none focus:ring-2 focus:ring-wiser-gold/20 focus:border-wiser-gold transition-all duration-300"
             />
           </div>
         </div>
@@ -71,11 +94,14 @@ export default function ContactForm() {
             <ClipboardList size={14} className="text-wiser-gold" />
             {t('subject')}
           </label>
-          <input 
+          <input
             required
-            type="text" 
+            type="text"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
             placeholder="How can we help?"
-            className="w-full px-5 py-4 rounded-xl border border-wiser-dark-teal/10 bg-white/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-wiser-gold/20 focus:border-wiser-gold transition-all duration-300" 
+            className="w-full px-5 py-4 rounded-xl border border-wiser-dark-teal/10 bg-white/50 text-wiser-teal focus:bg-white focus:outline-none focus:ring-2 focus:ring-wiser-gold/20 focus:border-wiser-gold transition-all duration-300"
           />
         </div>
 
@@ -84,11 +110,14 @@ export default function ContactForm() {
             <MessageSquare size={14} className="text-wiser-gold" />
             {t('message')}
           </label>
-          <textarea 
+          <textarea
             required
-            rows={5} 
+            rows={5}
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             placeholder="Tell us about your project..."
-            className="w-full px-5 py-4 rounded-xl border border-wiser-dark-teal/10 bg-white/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-wiser-gold/20 focus:border-wiser-gold transition-all duration-300 resize-none" 
+            className="w-full px-5 py-4 rounded-xl border border-wiser-dark-teal/10 bg-white/50 text-wiser-teal focus:bg-white focus:outline-none focus:ring-2 focus:ring-wiser-gold/20 focus:border-wiser-gold transition-all duration-300 resize-none"
           />
         </div>
 
@@ -110,12 +139,22 @@ export default function ContactForm() {
         </button>
 
         {isSuccess && (
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-green-600 font-medium text-center bg-green-50 py-3 rounded-lg border border-green-100"
           >
             {t('success')}
+          </motion.p>
+        )}
+
+        {isError && (
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-red-600 font-medium text-center bg-red-50 py-3 rounded-lg border border-red-100"
+          >
+            {t('error')}
           </motion.p>
         )}
       </form>

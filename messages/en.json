@@ -86,7 +86,8 @@
       "subject": "Subject",
       "message": "Your Message",
       "send": "Send Message",
-      "success": "Your message has been sent successfully!"
+      "success": "Your message has been sent successfully!",
+      "error": "Something went wrong. Please try again later."
     },
     "info": {
       "title": "Contact Information",
@@ -97,7 +98,7 @@
       "phoneValue2": "+20 10 19191208",
       "phoneValue3": "+20 10 90383000",
       "email": "Email Address",
-      "emailValue": "info@wiser-contracting.com",
+      "emailValue": "info@wiser-eg.com",
       "hours": "Working Hours",
       "hoursValue": "Sunday to Thursday: 10:00 AM - 6:00 PM"
     }

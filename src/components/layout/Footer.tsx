@@ -43,10 +43,10 @@ export default function Footer() {
               </p>
               <div className="flex flex-col items-center md:items-start gap-1 [unicode-bidi:isolate]">
                 <a
-                  href="mailto:info@wiser-contracting.com"
+                  href="mailto:info@wiser-eg.com"
                   className="inline-block text-left hover:text-white transition-colors text-sm font-light"
                 >
-                  info@wiser-contracting.com
+                  info@wiser-eg.com
                 </a>
                 <a
                   href="tel:+201019191208"

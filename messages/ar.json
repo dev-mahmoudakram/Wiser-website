@@ -86,7 +86,8 @@
       "subject": "الموضوع",
       "message": "رسالتك",
       "send": "إرسال الرسالة",
-      "success": "تم إرسال رسالتك بنجاح!"
+      "success": "تم إرسال رسالتك بنجاح!",
+      "error": "حدث خطأ ما. يرجى المحاولة مرة أخرى لاحقاً."
     },
     "info": {
       "title": "معلومات الاتصال",
@@ -97,7 +98,7 @@
       "phoneValue2": "+20 10 19191208",
       "phoneValue3": "+20 10 90383000",
       "email": "البريد الإلكتروني",
-      "emailValue": "info@wiser-contracting.com",
+      "emailValue": "info@wiser-eg.com",
       "hours": "ساعات العمل",
       "hoursValue": "من الأحد إلى الخميس: 10:00 ص - 6:00 م"
     }

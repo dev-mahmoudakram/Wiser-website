@@ -30,7 +30,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       icon: <Mail className="transition-colors" size={24} />,
       label: t('info.email'),
       value: t('info.emailValue'),
-      href: 'mailto:info@wiser-contracting.com',
+      href: 'mailto:info@wiser-eg.com',
       ltr: true,
     },
     {
